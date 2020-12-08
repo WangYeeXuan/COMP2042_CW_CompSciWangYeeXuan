@@ -1,6 +1,7 @@
-package model;
+package main;
 
 import java.io.File;
+import model.*;
 import java.util.List;
 
 import javafx.animation.AnimationTimer;
