@@ -2,52 +2,77 @@ package model;
 
 import javafx.scene.image.Image;
 
-public class WetTurtle extends Actor{
-	Image turtle1;
-	Image turtle2;
-	Image turtle3;
-	Image turtle4;
-	private int speed;
-	int i = 1;
-	boolean bool = true;
+public class WetTurtle extends Rideable {
+	Image turtleframe1 = new Image("file:src/main/resources/image/TurtleAnimation1.png", 130, 130, true, true);
+	Image turtleframe2 = new Image("file:src/main/resources/image/TurtleAnimation2Wet.png", 130, 130, true, true);
+	Image turtleframe3 = new Image("file:src/main/resources/image/TurtleAnimation3Wet.png", 130, 130, true, true);
+	Image turtleframe4 = new Image("file:src/main/resources/image/TurtleAnimation4Wet.png", 130, 130, true, true);
+	private double speed;
 	boolean sunk = false;
+	
+	//Constructor
+	public WetTurtle(int x, int y, int speed) {
+		
+		super(x, y, speed);
+		this.speed = speed;
+		setImage(turtleframe2);
+		
+	}
+	
+	//TurtleAnimation by set image
+	private void TurtleState(long now) {
+				
+		if (now/900000000  % 4 ==0) {
+			setImage(turtleframe2);
+			sunk = false;
+				
+		}
+		else if (now/900000000 % 4 == 1) {
+			setImage(turtleframe1);
+			sunk = false;
+		}
+		else if (now/900000000 %4 == 2) {
+			setImage(turtleframe3);
+			sunk = false;
+		} else if (now/900000000 %4 == 3) {
+			setImage(turtleframe4);
+			sunk = true;
+		}
+				
+	}
+	
+	//Action when method called
 	@Override
 	public void act(long now) {
 
-				if (now/900000000  % 4 ==0) {
-					setImage(turtle2);
-					sunk = false;
-					
-				}
-				else if (now/900000000 % 4 == 1) {
-					setImage(turtle1);
-					sunk = false;
-				}
-				else if (now/900000000 %4 == 2) {
-					setImage(turtle3);
-					sunk = false;
-				} else if (now/900000000 %4 == 3) {
-					setImage(turtle4);
-					sunk = true;
-				}
-			
+		TurtleState(now);
 		move(speed , 0);
-		if (getX() > 600 && speed>0)
+		KeepWithinWindow(speed);
+		
+	}
+	
+	
+	//Keep turtle within game window borders
+	protected void KeepWithinWindow(double speed) {
+		
+		if (getX() > 600 && speed>0) {
+			
 			setX(-200);
-		if (getX() < -75 && speed<0)
+			
+		}
+		
+		if (getX() < -75 && speed<0) {
+			
 			setX(600);
+			
+		}
+
 	}
-	public WetTurtle(int xpos, int ypos, int s, int w, int h) {
-		turtle1 = new Image("file:src/main/resources/Image/TurtleAnimation1.png", w, h, true, true);
-		turtle2 = new Image("file:src/main/resources/Image/TurtleAnimation2Wet.png", w, h, true, true);
-		turtle3 = new Image("file:src/main/resources/Image/TurtleAnimation3Wet.png", w, h, true, true);
-		turtle4 = new Image("file:src/main/resources/Image/TurtleAnimation4Wet.png", w, h, true, true);
-		setX(xpos);
-		setY(ypos);
-		speed = s;
-		setImage(turtle2);
-	}
-	public boolean isSunk() {
+	
+	//Return if turtle is sunk
+	protected boolean isSunk() {
 		return sunk;
 	}
+	
+	
 }

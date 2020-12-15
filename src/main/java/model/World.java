@@ -2,8 +2,10 @@ package model;
 
 
 import java.util.ArrayList;
+
 import java.util.List;
 
+import model.*;
 import javafx.animation.AnimationTimer;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
@@ -20,10 +22,7 @@ public abstract class World extends Pane {
     private AnimationTimer timer;
     
     public World() {
-    	addListener();
-    }
-    
-    private void addListener() {
+    	
     	sceneProperty().addListener(new ChangeListener<Scene>() {
 
 			@Override
@@ -98,8 +97,7 @@ public abstract class World extends Pane {
     public void remove(Actor actor) {
         getChildren().remove(actor);
     }
-    
-    //Method to return a list of Actor objects
+
     public <A extends Actor> List<A> getObjects(Class<A> cls) {
         ArrayList<A> someArray = new ArrayList<A>();
         for (Node n: getChildren()) {
@@ -110,5 +108,10 @@ public abstract class World extends Pane {
         return someArray;
     }
 
-    public abstract void act(long now);
+    public void act(long now) {
+    	
+    	
+    
+    }
+    
 }

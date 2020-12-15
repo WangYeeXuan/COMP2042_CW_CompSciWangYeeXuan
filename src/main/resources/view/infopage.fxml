@@ -11,7 +11,7 @@
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
-            <Image url="@infobackground.jpg" />
+            <Image url="@../image/infobackground.jpg" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="164.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Instructions" wrappingWidth="255.8599853515625">
@@ -21,7 +21,7 @@
       </Text>
       <ImageView fitHeight="168.0" fitWidth="167.0" layoutX="20.0" layoutY="96.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@wasdImg.png" />
+            <Image url="@../image/wasdImg.png" />
          </image>
       </ImageView>
       <Text fill="WHITE" layoutX="204.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W - Move forward">
@@ -44,9 +44,9 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="392.0" layoutY="714.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="392.0" layoutY="714.0" pickOnBounds="true" onMouseClicked="#exitInfo" preserveRatio="true">
          <image>
-            <Image url="@exitbtn.png" />
+            <Image url="@../image/exitbtn.png" />
          </image>
       </ImageView>
    </children>
