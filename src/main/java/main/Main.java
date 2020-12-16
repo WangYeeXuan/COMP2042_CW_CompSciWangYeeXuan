@@ -13,14 +13,16 @@ import model.HighScores;
 import model.Level;
 import model.Level1;
 import model.Level2;
+import model.Level3;
+import model.Level4;
+import model.Level5;
+
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
@@ -37,11 +39,15 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
+		
 		//Models
 		HighScores highScores = new HighScores();
-		Level[] levels = new Level[2];
+		Level[] levels = new Level[5];
 		levels[0] = new Level1();
 		levels[1] = new Level2();
+		levels[2] = new Level3();
+		levels[3] = new Level4();
+		levels[4] = new Level5();
 		
 		//Setup Scene Controllers
 		StartSceneController startSceneController = new StartSceneController();
@@ -69,14 +75,17 @@ public class Main extends Application {
 		//Setup SceneController
 		Scene scene  = new Scene(startScene, 600, 800);
 		
-		SceneController sceneController = new SceneController(scene, 5);
+		SceneController sceneController = new SceneController(scene, 8);
 		
 		sceneController.addScene(0, startScene);
 		sceneController.addScene(1, infoScene);
 		sceneController.addScene(2, levels[0]);
 		sceneController.addScene(3, levels[1]);
-		sceneController.addScene(4, endScene);
-		sceneController.addScene(5, hsScene);
+		sceneController.addScene(4, levels[2]);
+		sceneController.addScene(5, levels[3]);
+		sceneController.addScene(6, levels[4]);
+		sceneController.addScene(7, endScene);
+		sceneController.addScene(8, hsScene);
 		sceneController.activate(0);
 		
 		//Setup GameController
@@ -90,7 +99,6 @@ public class Main extends Application {
 		
 		primaryStage.setScene(scene);
 	    primaryStage.setResizable(false);
-	    primaryStage.setOnCloseRequest(evt -> Platform.exit());
 	    primaryStage.show();
 	    
 	    gameController.playMusic();

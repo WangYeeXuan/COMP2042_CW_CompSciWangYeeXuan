@@ -3,60 +3,30 @@ package model;
 import javafx.scene.image.Image;
 
 public class Crocodile extends Rideable {
-
-	private Image crocodileRight = new Image("file:src/main/resources/image/crocodileRight.png", 150, 150, true, true);
-	private Image crocodileLeft = new Image("file:src/main/resources/image/crocodileLeft.png", 150, 150, true, true);
 	
+	//Constructor
 	public Crocodile(int x, int y, double speed) {
 		
 		super(x, y, speed);
-		setCrocodileImage(speed);
+		setImage(new Image("file:src/main/resources/image/crocodileRight.png", 200, 200, true, true));
 		
 	}
-
+	
 	@Override
 	protected void KeepWithinWindow(double speed) {
 		
-		
+		if (getX()>600 && speed>0) {
+			
+			setX(-180);
+			
+		}
+	
+		if (getX()<-300 && speed<0) {
+			
+			setX(700);
+			
+		}
 				
-	}
-	
-	private void movement(double speed) {
-		
-		if((speed > 0)&&(getX() > 450)){
-			
-			this.speed = -speed;
-			
-		}
-		else if((speed < 0)&&(getX() < 0)) {
-			
-			this.speed = -speed;
-			
-		}
-		
-	}
-	
-	private void setCrocodileImage(double speed) {
-		
-		if(speed > 0) {
-			
-			setImage(crocodileRight);
-			
-		}
-		else {
-			
-			setImage(crocodileLeft);
-		
-		}
-		
-	}
-	
-	public void act(long now) {
-		
-		move(speed , 0);
-		movement(speed);
-		setCrocodileImage(speed);
-		
 	}
 	
 }

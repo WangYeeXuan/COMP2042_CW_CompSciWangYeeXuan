@@ -6,6 +6,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -21,20 +23,36 @@
             <Font size="42.0" />
          </font>
       </Text>
-      <Text fx:id="yourScore" fill="WHITE" layoutX="14.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Scored :" textAlignment="CENTER" wrappingWidth="243.73669815063477">
+      <Text fx:id="yourScore" layoutX="14.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Scored :" textAlignment="CENTER" wrappingWidth="243.73669815063477">
          <font>
             <Font size="24.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ff2f00" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
       <Label fx:id="endScore" alignment="CENTER" layoutX="249.0" layoutY="282.0" prefHeight="53.0" prefWidth="189.0" text="0000" textFill="#ff3700">
          <font>
             <Font size="50.0" />
          </font>
       </Label>
-      <Text fx:id="nameText" fill="WHITE" layoutX="21.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your name :" textAlignment="CENTER" wrappingWidth="228.2000274658203">
+      <Text fx:id="nameText" layoutX="21.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter your name :" textAlignment="CENTER" wrappingWidth="228.2000274658203">
          <font>
             <Font size="23.0" />
          </font>
+         <fill>
+            <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+               <stops>
+                  <Stop color="#ff00a4" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </fill>
       </Text>
       <TextField fx:id="username" alignment="CENTER" layoutX="258.0" layoutY="146.0" onKeyTyped="#keyTyped" prefHeight="42.0" prefWidth="313.0" promptText="Name" style="-fx-background-color: #03053f; -fx-text-fill: #5eefc9; -fx-prompt-text-fill: #adeddc;" />
       <Button layoutX="192.0" layoutY="454.0" mnemonicParsing="false" onMouseClicked="#enter" prefHeight="2.0" prefWidth="181.0" textAlignment="CENTER">

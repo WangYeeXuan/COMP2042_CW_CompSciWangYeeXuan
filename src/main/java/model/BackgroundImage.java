@@ -7,10 +7,10 @@ public class BackgroundImage extends Actor{
 	//Constructor 
 	public BackgroundImage() {
 		
-		setImage(new Image("file:src/main/resources/image/iKogsKW.png", 600, 800, true, true));
-		
+		setImage(new Image("file:src/main/resources/image/iKogsKW.png", 600, 900, true, true));
 	}
 	
+
 	@Override
 	public void act(long now) {
 		

@@ -35,7 +35,7 @@ public class Animal extends Actor {
 	public Animal() {
 		
 		setX(300);
-		setY(679.8+movement);
+		setY(750);
 		imgW1 = new Image("file:src/main/resources/image/froggerUp.png", imgSize, imgSize, true, true);
 		imgA1 = new Image("file:src/main/resources/image/froggerLeft.png", imgSize, imgSize, true, true);
 		imgS1 = new Image("file:src/main/resources/image/froggerDown.png", imgSize, imgSize, true, true);
@@ -184,9 +184,9 @@ public class Animal extends Actor {
 	
 	private void KeepWithinWindow() {
 		
-		if (getY()<0 || getY()>734) {
+		if (getY()<0 || getY()>800) {
 			setX(300);
-			setY(679.8+movement);
+			setY(750);
 		}
 		if (getX()<0) {
 			move(movement*2, 0);

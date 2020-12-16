@@ -1,20 +1,14 @@
 package model;
 
-import javafx.application.Platform;
-import javafx.scene.control.Button;
-import javafx.scene.image.Image;
 import model.*;
 
-public class Level1 extends Level{
+public class Level3 extends Level {
 	
-	public Level1() {
+	public Level3() {
 		
-		 
-		add(new Crocodile(0, 166, 0.75));
-		add(new Crocodile(400, 166, 0.75));
-		//add(new ShortLog(0, 166, 0.75));
-		//add(new ShortLog(220, 166, 0.75));
-		//add(new ShortLog(440, 166, 0.75));
+		add(new ShortLog(0, 166, 0.75));
+		add(new ShortLog(220, 166, 0.75));
+		add(new ShortLog(440, 166, 0.75));
 		add(new LongLog(0, 276, -2));
 		add(new LongLog(400, 276, -2));
 		add(new ShortLog(50, 329, 0.75));
@@ -31,8 +25,6 @@ public class Level1 extends Level{
 		add(new End(141 + 141-13,96));
 		add(new End(141 + 141-13+141-13+1,96));
 		add(new End(141 + 141-13+141-13+141-13+3,96));
-		add(new Fastcar(500, 490, -5));
-		add(new Fastcar(500, 600, 2));
 		setAnimaltoFront();
 		/*
 		add(new ShortLog(0, 166, 0.75));
