@@ -6,7 +6,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
@@ -44,9 +43,9 @@
             <Font size="26.0" />
          </font>
       </Text>
-      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="392.0" layoutY="714.0" pickOnBounds="true" onMouseClicked="#exitInfo" preserveRatio="true">
+      <ImageView fitHeight="65.0" fitWidth="167.0" layoutX="419.0" layoutY="721.0" onMouseClicked="#exitInfo">
          <image>
-            <Image url="@../image/exitbtn.png" />
+            <Image url="@../image/backbtn.png" />
          </image>
       </ImageView>
    </children>

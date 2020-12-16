@@ -7,11 +7,13 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 import model.HighScores;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
@@ -102,5 +104,12 @@ public class HSSceneController implements Initializable{
 		gameController.restart();
 		
 	}
+	@FXML
+	public Button closeButton;
 	
+	@FXML
+	private void closeWindow(ActionEvent event) {
+		Stage stage = (Stage) closeButton.getScene().getWindow();
+		stage.close();
+	}
 }

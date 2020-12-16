@@ -30,5 +30,14 @@
             </ImageView>
          </graphic>
       </Button>
+      <Button fx:id="closeButton" layoutX="144.0" layoutY="511.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="99.0" prefWidth="299.0">
+         <graphic>
+            <ImageView fitHeight="91.0" fitWidth="265.0" >
+               <image>
+                  <Image url="@../image/exitbtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </Pane>

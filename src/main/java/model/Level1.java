@@ -1,5 +1,7 @@
 package model;
 
+import javafx.application.Platform;
+import javafx.scene.control.Button;
 import model.*;
 
 public class Level1 extends Level{

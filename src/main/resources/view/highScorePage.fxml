@@ -22,14 +22,6 @@
             <Font size="36.0" />
          </font>
       </Text>
-      <Button layoutX="189.0" layoutY="559.0" mnemonicParsing="false" onMouseClicked="#retry" prefHeight="85.0" prefWidth="217.0">
-         <graphic>
-            <ImageView fitHeight="97.0" fitWidth="201.0">
-               <image>
-                  <Image url="@../image/homebtn.png" />
-               </image>
-            </ImageView>
-         </graphic></Button>
       <GridPane gridLinesVisible="true" layoutX="100.0" layoutY="187.0" prefHeight="348.0" prefWidth="422.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="90.0" minWidth="68.0" prefWidth="90.0" />
@@ -216,5 +208,22 @@
             <Font size="20.0" />
          </font>
       </Text>
+      <Button layoutX="189.0" layoutY="559.0" mnemonicParsing="false" onMouseClicked="#retry" prefHeight="85.0" prefWidth="217.0">
+         <graphic>
+            <ImageView fitHeight="78.0" fitWidth="200.0">
+               <image>
+                  <Image url="@../image/retrybtn.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <Button fx:id="closeButton" layoutX="189.0" layoutY="672.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="105.0" prefWidth="217.0">
+         <graphic>
+            <ImageView fitHeight="85.0" fitWidth="200.0">
+               <image>
+                  <Image url="@../image/exitbtn.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
    </children>
 </Pane>

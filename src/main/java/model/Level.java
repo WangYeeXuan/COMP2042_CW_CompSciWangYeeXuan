@@ -1,6 +1,7 @@
 package model;
 
-
+import javafx.application.Platform;
+import javafx.scene.control.Button;
 
 public abstract class Level extends World {
 	
@@ -13,7 +14,7 @@ public abstract class Level extends World {
 		scoreboard = new Scoreboard(this);
 		animal = new Animal();
 		add(animal);
-		
+
 	}
 	
 	public Scoreboard getScoreboard() {
