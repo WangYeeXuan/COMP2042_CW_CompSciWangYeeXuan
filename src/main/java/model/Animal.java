@@ -1,12 +1,7 @@
 package model;
 
-import java.util.ArrayList;
-
-
 import javafx.event.EventHandler;
-import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 
 
@@ -117,6 +112,8 @@ public class Animal extends Actor {
 					move(movementX, 0);
 					animalAnimation(second, 'D');
 	            	break;
+			default:
+				break;
 					
 			}
 			
@@ -202,22 +199,22 @@ public class Animal extends Actor {
 		if (getIntersectingObjects(Obstacle.class).size() >= 1) {
 			carDeath = true;
 		}
-		if (getIntersectingObjects(WetTurtle.class).size() >= 1) {
+		if (getIntersectingObjects(Wet_turtle.class).size() >= 1) {
 			
-			if (getIntersectingObjects(WetTurtle.class).get(0).isSunk()) {
+			if (getIntersectingObjects(Wet_turtle.class).get(0).isSunk()) {
 				
 				//waterDeath = true;
 				
 			} 
 			else {
 				
-				move(getIntersectingObjects(WetTurtle.class).get(0).getSpeed(), 0);
+				move(getIntersectingObjects(Wet_turtle.class).get(0).getSpeed(), 0);
 				
 			}
 		}
-		else if (getIntersectingObjects(Rideable.class).size() >= 1 && !noMove ) {
+		else if (getIntersectingObjects(Platform.class).size() >= 1 && !noMove ) {
 			
-			move(getIntersectingObjects(Rideable.class).get(0).getSpeed(), 0);
+			move(getIntersectingObjects(Platform.class).get(0).getSpeed(), 0);
 			
 		}
 		else if (getIntersectingObjects(End.class).size() >= 1) {

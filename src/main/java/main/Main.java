@@ -1,34 +1,19 @@
 package main;
 
-import java.io.File;
-import java.util.List;
+import controller.Enter_name_page_controller;
+import controller.Game_controller;
+import controller.Highscore_page_controller;
+import controller.Info_page_controller;
+import controller.Scene_controller;
+import controller.Main_menu_controller;
+import model.Highscore;
+import model.level.*;
 
-import controller.EndSceneController;
-import controller.GameController;
-import controller.HSSceneController;
-import controller.InfoSceneController;
-import controller.SceneController;
-import controller.StartSceneController;
-import model.HighScores;
-import model.Level;
-import model.Level1;
-import model.Level2;
-import model.Level3;
-import model.Level4;
-import model.Level5;
-
-import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 import javafx.scene.layout.Pane;
-import javafx.scene.media.Media;
-import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import javafx.util.Duration;
 
 public class Main extends Application {
 	
@@ -41,41 +26,41 @@ public class Main extends Application {
 		
 		
 		//Models
-		HighScores highScores = new HighScores();
+		Highscore highScores = new Highscore();
 		Level[] levels = new Level[5];
-		levels[0] = new Level1();
-		levels[1] = new Level2();
-		levels[2] = new Level3();
-		levels[3] = new Level4();
-		levels[4] = new Level5();
+		levels[0] = new Level_1();
+		levels[1] = new Level_2();
+		levels[2] = new Level_3();
+		levels[3] = new Level_4();
+		levels[4] = new Level_5();
 		
 		//Setup Scene Controllers
-		StartSceneController startSceneController = new StartSceneController();
-		InfoSceneController infoSceneController = new InfoSceneController();
-		EndSceneController endSceneController = new EndSceneController(highScores);
-		HSSceneController hsSceneController= new HSSceneController(highScores);
+		Main_menu_controller startSceneController = new Main_menu_controller();
+		Info_page_controller infoSceneController = new Info_page_controller();
+		Enter_name_page_controller endSceneController = new Enter_name_page_controller(highScores);
+		Highscore_page_controller hsSceneController= new Highscore_page_controller(highScores);
 
 		//Setup Views
-		FXMLLoader startSceneLoader = new FXMLLoader(getClass().getResource("/view/mainMenu.fxml"));
+		FXMLLoader startSceneLoader = new FXMLLoader(getClass().getResource("/view/Main_menu.fxml"));
 		startSceneLoader.setController(startSceneController);
 		Pane startScene = startSceneLoader.load();
 		
-		FXMLLoader infoSceneLoader = new FXMLLoader(getClass().getResource("/view/infoPage.fxml"));
+		FXMLLoader infoSceneLoader = new FXMLLoader(getClass().getResource("/view/Info_page.fxml"));
 		infoSceneLoader.setController(infoSceneController);
 		Pane infoScene = infoSceneLoader.load();
 		
-		FXMLLoader endSceneLoader = new FXMLLoader(getClass().getResource("/view/enterNamePage.fxml"));
+		FXMLLoader endSceneLoader = new FXMLLoader(getClass().getResource("/view/Enter_name_page.fxml"));
 		endSceneLoader.setController(endSceneController);
 		Pane endScene = endSceneLoader.load();
 		
-		FXMLLoader hsSceneLoader = new FXMLLoader(getClass().getResource("/view/highScorePage.fxml"));
+		FXMLLoader hsSceneLoader = new FXMLLoader(getClass().getResource("/view/Highscore_page.fxml"));
 		hsSceneLoader.setController(hsSceneController);
 		Pane hsScene = hsSceneLoader.load();
 		
 		//Setup SceneController
 		Scene scene  = new Scene(startScene, 600, 800);
 		
-		SceneController sceneController = new SceneController(scene, 8);
+		Scene_controller sceneController = new Scene_controller(scene, 8);
 		
 		sceneController.addScene(0, startScene);
 		sceneController.addScene(1, infoScene);
@@ -89,7 +74,7 @@ public class Main extends Application {
 		sceneController.activate(0);
 		
 		//Setup GameController
-		GameController gameController = new GameController(scene, sceneController, endSceneController, hsSceneController);
+		Game_controller gameController = new Game_controller(scene, sceneController, endSceneController, hsSceneController);
 		
 		//Link SceneControllers to GameController
 		startSceneController.setGameController(gameController);

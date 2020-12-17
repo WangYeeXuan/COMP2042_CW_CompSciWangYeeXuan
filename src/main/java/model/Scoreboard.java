@@ -1,12 +1,11 @@
 package model;
 
 
-
 public class Scoreboard {
 
 	private Digit[] scoreDigit;
 	
-	public Scoreboard(Level level) {
+	public Scoreboard(model.level.Level level) {
 		
 		scoreDigit =  new Digit[4];
 		

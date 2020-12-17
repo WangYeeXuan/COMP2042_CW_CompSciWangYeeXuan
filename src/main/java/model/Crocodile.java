@@ -2,7 +2,7 @@ package model;
 
 import javafx.scene.image.Image;
 
-public class Crocodile extends Rideable {
+public class Crocodile extends Platform {
 	
 	//Constructor
 	public Crocodile(int x, int y, double speed) {

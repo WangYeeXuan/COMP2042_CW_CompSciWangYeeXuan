@@ -2,7 +2,7 @@ package model;
 
 import javafx.scene.image.Image;
 
-public class Turtle extends Rideable {
+public class Turtle extends Platform {
 	private Image turtleframe1 = new Image("file:src/main/resources/image/TurtleAnimation1.png", 130, 130, true, true);
 	private Image turtleframe2 = new Image("file:src/main/resources/image/TurtleAnimation2.png", 130, 130, true, true);
 	private Image turtleframe3 = new Image("file:src/main/resources/image/TurtleAnimation3.png", 130, 130, true, true);

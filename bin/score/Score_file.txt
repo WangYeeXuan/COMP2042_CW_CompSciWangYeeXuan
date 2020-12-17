@@ -1,0 +1,10 @@
+Wa	4150
+W	4010
+Wwww	3880
+w	2380
+w	2380
+w	2380
+Meat	1940
+waaaa	1740
+waaaa	1740
+waaaa	1740
