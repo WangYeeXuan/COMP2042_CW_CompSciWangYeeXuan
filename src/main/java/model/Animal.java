@@ -14,23 +14,29 @@ public class Animal extends Actor {
 	private Image imgA2;
 	private Image imgS2;
 	private Image imgD2;
+	
 	private int points = 0;
 	private int end = 0;
+	
 	private boolean second = false;
 	private boolean noMove = false;
+	
 	private double movement = 13.3333333*2;
 	private double movementX = 10.666666*2;
 	private int imgSize = 40;
+	
 	private boolean carDeath = false;
 	private boolean waterDeath = false;
+	
 	private boolean changeScore = false;
-	private int deathFrame = 0;
+	private int carD = 0;
+	private int waterD = 0;
 	private double w = 800;
 	
 	public Animal() {
 		
-		setX(300);
-		setY(750);
+		Reset_frog_position();
+		
 		imgW1 = new Image("file:src/main/resources/image/froggerUp.png", imgSize, imgSize, true, true);
 		imgA1 = new Image("file:src/main/resources/image/froggerLeft.png", imgSize, imgSize, true, true);
 		imgS1 = new Image("file:src/main/resources/image/froggerDown.png", imgSize, imgSize, true, true);
@@ -39,18 +45,20 @@ public class Animal extends Actor {
 		imgA2 = new Image("file:src/main/resources/image/froggerLeftJump.png", imgSize, imgSize, true, true);
 		imgS2 = new Image("file:src/main/resources/image/froggerDownJump.png", imgSize, imgSize, true, true);
 		imgD2 = new Image("file:src/main/resources/image/froggerRightJump.png", imgSize, imgSize, true, true);
+		
 		setImage(imgW1);
-		setKeyListener();
+		
+		createKeyListener();
 		
 	}
 	
-	 private void setKeyListener() {
+	 private void createKeyListener() {
 			
 		setOnKeyPressed(new EventHandler<KeyEvent>() {
 				
 			public void handle(KeyEvent event){
 					
-				playerControls(event);
+				User_controls(event);
 					
 			}
 				
@@ -59,7 +67,7 @@ public class Animal extends Actor {
 		setOnKeyReleased(new EventHandler<KeyEvent>() {
 			public void handle(KeyEvent event) {
 					
-				playerControls(event);
+				User_controls(event);
 					
 			}
 				
@@ -67,79 +75,72 @@ public class Animal extends Actor {
 			
 	}
 	
-	//Player Controls
-	private void playerControls(KeyEvent event) {
+	/**
+	 * This method take in user's WASD input.
+	 * The frog is moved accordingly.
+	 * The frog animation is displaye accordingly.
+	 * The score is updated accordingly
+	 * @param event
+	 */
+	private void User_controls(KeyEvent event) {
 		
 		if (noMove) {
-			
 		}
 		else {
-			
 			switch (event.getCode()) {
 			
-				case W: 
-					move(0, -movement);
-	                animalAnimation(second, 'W');
-	                if (second) {
-	                	
-	                	changeScore = false;
-	                	
-	                }
-	                else {
-	                	
-	                	if (getY() < w) {
-	                		
-							changeScore = true;
-							w = getY();
-							points+=10;
-							
-						}
-	                	
-	                }
-	                break;
+				case W: move(0, -movement);
+						Frog_animation(second, 'W');
+	                	if (second) {
+	                		changeScore = false;
+	                	}
+	                	else {
+	                		if (getY() < w) {
+	                			changeScore = true;
+	                			w = getY();
+	                			points+=10;
+	                		}
+	                	}
+	                	break;
 	                
-				case A:
-					move(-movementX, 0);
-					animalAnimation(second, 'A');
-	            	break;
+				case A:	move(-movementX, 0);
+						Frog_animation(second, 'A');
+						break;
 	            	
-				case S:
-					move(0, movement);
-					animalAnimation(second, 'S');
-	            	break;
+				case S:	move(0, movement);
+						Frog_animation(second, 'S');
+						break;
 	            	
-				case D:
-					move(movementX, 0);
-					animalAnimation(second, 'D');
-	            	break;
-			default:
-				break;
-					
+				case D:	move(movementX, 0);
+						Frog_animation(second, 'D');
+						break;
+						
+				default:break;
 			}
 			
 		}
 		
 	}
 	
-	//Animation
-	private void animalAnimation(boolean second, char key){
+	/**
+	 * This method takes in user's WASD input and assign each input with different frog animation
+	 * @param second
+	 * @param key
+	 */
+	private void Frog_animation(boolean second, char key){
 		
 		if (second) {
 			
 			switch(key) {
 			
-				case 'W':
-					setImage(imgW1);
-					break;
-				case 'A':
-					setImage(imgA1);
-					break;
-				case 'S':
-					setImage(imgS1);
-					break;
-				case 'D':
-					setImage(imgD1);
-					break;
+				case 'W':	setImage(imgW1);
+							break;
+				case 'A':	setImage(imgA1);
+							break;
+				case 'S':	setImage(imgS1);
+							break;
+				case 'D':	setImage(imgD1);
+							break;
 			}	
 			
 			this.second = false;
@@ -149,18 +150,14 @@ public class Animal extends Actor {
 			
 			switch(key) {
 			
-				case 'W':
-					setImage(imgW2);
-					break;
-				case 'A':
-					setImage(imgA2);
-					break;
-				case 'S':
-					setImage(imgS2);
-					break;
-				case 'D':
-					setImage(imgD2);
-					break;
+				case 'W':	setImage(imgW2);
+							break;
+				case 'A':	setImage(imgA2);
+							break;
+				case 'S':	setImage(imgS2);
+							break;
+				case 'D':	setImage(imgD2);
+							break;
 			}	
 			
 			this.second = true;
@@ -169,21 +166,22 @@ public class Animal extends Actor {
 		
 	}
 	
-	//Method called every tick when AnimationTimer is running
 	@Override
 	public void act(long now) {
 
-		KeepWithinWindow();
-		objectInteraction();
-		deathProcess(now);
+		Keep_frog_inbound();
+		Object_intersection();
+		Death_image(now);
 		
 	}
 	
-	private void KeepWithinWindow() {
+	/**
+	 * This method keeps the frog within the size of the application window
+	 */
+	private void Keep_frog_inbound() {
 		
 		if (getY()<0 || getY()>750) {
-			setX(300);
-			setY(750);
+			Reset_frog_position();
 		}
 		if (getX()<0) {
 			move(movement*2, 0);
@@ -194,7 +192,10 @@ public class Animal extends Actor {
 		
 	}
 	
-	private void objectInteraction() {
+	/**
+	 * This method checks if the frog has intersect with obstacle, wet turtle, platform and end
+	 */
+	private void Object_intersection() {
 		
 		if (getIntersectingObjects(Obstacle.class).size() >= 1) {
 			carDeath = true;
@@ -225,7 +226,7 @@ public class Animal extends Actor {
 			}
 			
 			getIntersectingObjects(End.class).get(0).setEnd();
-			respawn(true);
+			Respawn(true);
 		}
 		else if (getY()<413){
 			
@@ -235,25 +236,29 @@ public class Animal extends Actor {
 		
 	}
 	
-	private void deathProcess(long now) {
+	/**
+	 * This method assign death images according to the type of death
+	 * @param now
+	 */
+	private void Death_image(long now) {
 		
 		if (carDeath) {
 			noMove = true;
 			if ((now)% 11 == 0) {
-				deathFrame++;
+				carD++;
 			}
-			if (deathFrame==1) {
+			if (carD==1) {
 				setImage(new Image("file:src/main/resources/image/cardeath1.png", imgSize, imgSize, true, true));
 			}
-			if (deathFrame==2) {
+			if (carD==2) {
 				setImage(new Image("file:src/main/resources/image/cardeath2.png", imgSize, imgSize, true, true));
 			}
-			if (deathFrame==3) {
+			if (carD==3) {
 				setImage(new Image("file:src/main/resources/image/cardeath3.png", imgSize, imgSize, true, true));
 			}
-			if (deathFrame == 4) {
+			if (carD == 4) {
 				
-				respawn(false);
+				Respawn(false);
 				
 			}
 			
@@ -261,35 +266,46 @@ public class Animal extends Actor {
 		if (waterDeath) {
 			noMove = true;
 			if ((now)% 11 ==0) {
-				deathFrame++;
+				waterD++;
 			}
-			if (deathFrame==1) {
+			if (waterD==1) {
 				setImage(new Image("file:src/main/resources/image/waterdeath1.png", imgSize,imgSize , true, true));
 			}
-			if (deathFrame==2) {
+			if (waterD==2) {
 				setImage(new Image("file:src/main/resources/image/waterdeath2.png", imgSize,imgSize , true, true));
 			}
-			if (deathFrame==3) {
+			if (waterD==3) {
 				setImage(new Image("file:src/main/resources/image/waterdeath3.png", imgSize,imgSize , true, true));
 			}
-			if (deathFrame == 4) {
+			if (waterD == 4) {
 				setImage(new Image("file:src/main/resources/image/waterdeath4.png", imgSize,imgSize , true, true));
 			}
-			if (deathFrame == 5) {
+			if (waterD == 5) {
 				
-				respawn(false);
+				Respawn(false);
 				
 			}
 		}
 		
 	}
 	
-	private void respawn(boolean goalReached) {
-		
+	/**
+	 * This method resets to frog position to the starting point
+	 */
+	private void Reset_frog_position() {
 		setX(300);
 		setY(750);
+	}
+	
+	/**
+	 * This method check if the frog has reached the End
+	 * @param goalReached
+	 */
+	private void Respawn(boolean End_reached) {
 		
-		if (goalReached) {
+		Reset_frog_position();
+		
+		if (End_reached) {
 			
 			points+=50;
 			changeScore = true;
@@ -301,7 +317,8 @@ public class Animal extends Actor {
 			
 			waterDeath = false;
 			carDeath = false;
-			deathFrame = 0;
+			carD = 0;
+			waterD = 0;
 			setImage(new Image("file:src/main/resources/image/froggerUp.png", imgSize, imgSize, true, true));
 			noMove = false;
 			if (points>50) {
@@ -312,17 +329,14 @@ public class Animal extends Actor {
 		}
 	}
 	
-	//Determine if game end conditions are met
 	public boolean getStop() {
 		return end==5;
 	}
 	
-	//Return points acquired by player
 	public int getPoints() {
 		return points;
 	}
 	
-	//Return true if score displayed should be changed
 	public boolean changeScore() {
 		
 		if (changeScore) {

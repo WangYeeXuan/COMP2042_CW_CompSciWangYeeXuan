@@ -17,16 +17,20 @@ public class End extends Actor{
 		// TODO Auto-generated method stub
 	}
 	
-	//set activated to true when frog reached end, change to corresponding image
+	/**
+	 * This method sets the End image and set activated to true
+	 */
 	protected void setEnd() {
 		setImage(new Image("file:src/main/resources/image/FrogEnd.png", 70, 70, true, true));
 		activated = true;
 	}
 	
-	//Return if frog reached and activated End
+	/**
+	 * This method return if frog has reached and End is activated
+	 * @return
+	 */
 	protected boolean isActivated() {
 		return activated;
 	}
-	
 
 }

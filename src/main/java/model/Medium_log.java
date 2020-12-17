@@ -4,29 +4,20 @@ import javafx.scene.image.Image;
 
 public class Medium_log extends Platform {
 	
-	//Constructor
-	public Medium_log(int x, int y, double speed) {
+		public Medium_log(int x, int y, double speed) {
 		
 		super(x, y, speed);
-		setImage(new Image("file:src/main/resources/image/log2.png", 225, 225, true, true));
+		Set_mediumlog_image();
+		}
 		
-	}
-	
-	@Override
-	protected void KeepWithinWindow(double speed) {
-		
-		if (getX()>600 && speed>0) {
+		/**
+		 * Set log image
+		 */
+		public void Set_mediumlog_image() {
 			
-			setX(-180);
-			
+			setImage(new Image("file:src/main/resources/image/log2.png", 225, 225, true, true));
+
 		}
 	
-		if (getX()<-300 && speed<0) {
-			
-			setX(700);
-			
-		}
-				
-	}
 	
 }

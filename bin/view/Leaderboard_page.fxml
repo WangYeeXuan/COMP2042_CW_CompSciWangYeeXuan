@@ -5,21 +5,21 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="800.0" fitWidth="600.0">
          <image>
             <Image url="@../image/infobackground.jpg" />
          </image>
       </ImageView>
-      <Text fx:id="highScore" layoutX="145.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Score" textAlignment="CENTER" wrappingWidth="304.1264953613281">
+      <Text fx:id="highScore" layoutX="145.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leaderboard" textAlignment="CENTER" wrappingWidth="304.1264953613281">
          <font>
             <Font size="36.0" />
          </font>
@@ -51,152 +51,152 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Text fx:id="hs1" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="1." textAlignment="CENTER" wrappingWidth="74.0">
+            <Text fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="1." textAlignment="CENTER" wrappingWidth="74.0">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs2" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="2." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="1">
+            <Text fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="2." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="1">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs3" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="3." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="2">
+            <Text fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="3." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="2">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs4" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="4." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="3">
+            <Text fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="4." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="3">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs5" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="5." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="4">
+            <Text fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="5." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="4">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs6" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="6." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="5">
+            <Text fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="6." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="5">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs7" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="7." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="6">
+            <Text fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="7." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="6">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs8" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="8." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="7">
+            <Text  fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="8." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="7">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs9" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="9." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="8">
+            <Text  fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="9." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="8">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="hs10" fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="10." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="9">
+            <Text  fill="#00ffea" strokeType="OUTSIDE" strokeWidth="0.0" text="10." textAlignment="CENTER" wrappingWidth="74.0" GridPane.rowIndex="9">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score1" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.5999755859375" GridPane.columnIndex="1">
+            <Text fx:id="score_1" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.5999755859375" GridPane.columnIndex="1">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score2" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.5999755859375" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Text fx:id="score_2" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.5999755859375" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score3" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.60003662109375" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Text fx:id="score_3" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.60003662109375" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score4" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="110.79998779296875" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Text fx:id="score_4" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="110.79998779296875" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score5" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="110.79998779296875" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <Text fx:id="score_5" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="110.79998779296875" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score6" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <Text fx:id="score_6" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score7" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <Text fx:id="score_7" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score8" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="110.20001220703125" GridPane.columnIndex="1" GridPane.rowIndex="7">
+            <Text fx:id="score_8" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="110.20001220703125" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score9" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.79998779296875" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <Text fx:id="score_9" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.79998779296875" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="score10" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+            <Text fx:id="score_10" fill="#ff4200" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="111.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name2" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="234.39996337890625" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Text fx:id="name_2" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="234.39996337890625" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name1" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2">
+            <Text fx:id="name_1" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name3" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="233.5999755859375" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Text fx:id="name_3" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="233.5999755859375" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name4" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Text fx:id="name_4" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name5" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2" GridPane.rowIndex="4">
+            <Text fx:id="name_5" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2" GridPane.rowIndex="4">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name6" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="233.5999755859375" GridPane.columnIndex="2" GridPane.rowIndex="5">
+            <Text fx:id="name_6" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="233.5999755859375" GridPane.columnIndex="2" GridPane.rowIndex="5">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name7" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="235.20001220703125" GridPane.columnIndex="2" GridPane.rowIndex="6">
+            <Text fx:id="name_7" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="235.20001220703125" GridPane.columnIndex="2" GridPane.rowIndex="6">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name8" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2" GridPane.rowIndex="7">
+            <Text fx:id="name_8" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.79998779296875" GridPane.columnIndex="2" GridPane.rowIndex="7">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name9" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.800048828125" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <Text fx:id="name_9" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="232.800048828125" GridPane.columnIndex="2" GridPane.rowIndex="8">
                <font>
                   <Font size="22.0" />
                </font>
             </Text>
-            <Text fx:id="name10" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="233.5999755859375" GridPane.columnIndex="2" GridPane.rowIndex="9">
+            <Text fx:id="name_10" fill="#fffb00" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="233.5999755859375" GridPane.columnIndex="2" GridPane.rowIndex="9">
                <font>
                   <Font size="22.0" />
                </font>
@@ -218,7 +218,7 @@
             <Font size="20.0" />
          </font>
       </Text>
-      <Button layoutX="189.0" layoutY="559.0" mnemonicParsing="false" onMouseClicked="#retry" prefHeight="85.0" prefWidth="217.0">
+      <Button layoutX="189.0" layoutY="559.0" mnemonicParsing="false" onMouseClicked="#Retry" prefHeight="85.0" prefWidth="217.0">
          <graphic>
             <ImageView fitHeight="78.0" fitWidth="200.0">
                <image>
@@ -226,7 +226,7 @@
                </image>
             </ImageView>
          </graphic></Button>
-      <Button fx:id="closeButton" layoutX="189.0" layoutY="672.0" mnemonicParsing="false" onAction="#closeWindow" prefHeight="105.0" prefWidth="217.0">
+      <Button fx:id="closeButton" layoutX="189.0" layoutY="672.0" mnemonicParsing="false" onAction="#Close_window" prefHeight="105.0" prefWidth="217.0">
          <graphic>
             <ImageView fitHeight="85.0" fitWidth="200.0">
                <image>
@@ -236,4 +236,4 @@
          </graphic>
       </Button>
    </children>
-</Pane>
+</AnchorPane>

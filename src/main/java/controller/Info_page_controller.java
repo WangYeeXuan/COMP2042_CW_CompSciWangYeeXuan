@@ -2,20 +2,28 @@ package controller;
 
 import javafx.fxml.FXML;
 
+/**
+ * This class is responsible for the Info_page GUI
+ * @author Wang
+ *
+ */
 public class Info_page_controller {
 
-	private Game_controller gameController;
+	private Game_controller Game_controller;
 	
-	public void setGameController(Game_controller gameController) {
+	public void setGameController(Game_controller Game_controller) {
 		
-		this.gameController = gameController;
+		this.Game_controller = Game_controller;
 		
 	}
 	
+	/**
+	 * This method change Info_page scene to Main_menu scene. This occur when the "BACK" button is clicked
+	 */
 	@FXML
-	private void exitInfo() {
+	private void Exit_info() {
 		
-		gameController.previousScene();
+		Game_controller.Previous_scene();
 		
 	}
 	

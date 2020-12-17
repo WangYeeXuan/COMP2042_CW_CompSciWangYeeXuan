@@ -9,6 +9,9 @@ public class Music_player{
 
 	private MediaPlayer mediaPlayer;
 	
+	/**
+	 * Load music player
+	 */
 	public Music_player(){
 		
 		String musicFile = "src/main/resources/audio/Frogger Main Song Theme (loop).mp3";   
@@ -18,11 +21,17 @@ public class Music_player{
 		
 	}
 	
+	/**
+	 * Play music
+	 */
 	public void play() {
 		
 	    mediaPlayer.play();
 	}
 	
+	/**
+	 * Stop music
+	 */
 	public void stop() {
 		mediaPlayer.stop();
 	}

@@ -1,12 +1,17 @@
 package model;
 
-
+/**
+ * This class is responsible of the display and update of the scoreboard
+ * @author E.B. Wang
+ *
+ */
 public class Scoreboard {
 
 	private Digit[] scoreDigit;
 	
 	public Scoreboard(model.level.Level level) {
 		
+		//Create an array to store the digits
 		scoreDigit =  new Digit[4];
 		
 		scoreDigit[0] = new Digit(0, 20, 570, 40);
@@ -22,6 +27,10 @@ public class Scoreboard {
 		
 	}
 	
+	/**
+	 * This method is used to set the score
+	 * @param n
+	 */
 	public void setScore(int n) {
 		
     	for(int i=0;i<4;i++) {

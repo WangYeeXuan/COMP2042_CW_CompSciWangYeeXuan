@@ -2,79 +2,56 @@ package controller;
 
 import java.io.IOException;
 
-
 import java.lang.reflect.InvocationTargetException;
 
-import model.Music_player;
-import model.level.*;
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
 
+import model.Music_player;
+import model.level.*;
 
+/**
+ * This class is responsible to control the view of the game
+ * @author Wang
+ *
+ */
 public class Game_controller {
 
 	private AnimationTimer timer;
-	private int currentScene;
-	private int totalScore = 0;
-	private int savedScore = 0;
-	private Music_player musicPlayer = new Music_player();
-	private Scene_controller sceneController;
-	private Enter_name_page_controller endSceneController;
-	private Highscore_page_controller hsSceneController;
+	private int current_Scene;
+	private int total_Score = 0;
+	private int saved_Score = 0;
+	private Music_player music_Player = new Music_player();
+	private Scene_controller Scene_controller;
+	private Enter_name_page_controller Enter_name_page_controller;
+	private Leaderboard_page_controller Leaderboard_page_controller;
 	private Scene scene;
 	
-	public Game_controller(Scene scene, Scene_controller sceneController, Enter_name_page_controller endSceneController, Highscore_page_controller hsSceneController) throws IOException {
+	public Game_controller(Scene scene, Scene_controller Scene_controller, Enter_name_page_controller Enter_name_page_controller, Leaderboard_page_controller Leaderboard_page_controller) throws IOException {
 		
 		this.scene = scene;
-		this.sceneController = sceneController;
-		this.endSceneController = endSceneController;
-		this.hsSceneController = hsSceneController;
-		currentScene = 0;
+		this.Scene_controller = Scene_controller;
+		this.Enter_name_page_controller = Enter_name_page_controller;
+		this.Leaderboard_page_controller = Leaderboard_page_controller;
+		current_Scene = 0;
 		
 	}
 	
-	public void playMusic() {
+	/**
+	 * This method plays the game music
+	 */
+	public void Play_music() {
     	
-    	musicPlayer.play();
+		music_Player.play();
     	
     }
 	
-	private void nextLevel() {
-		
-		nextScene();
-		
-		if (scene.getRoot() instanceof Level) {
-			
-			((Level)scene.getRoot()).getScoreboard().setScore(savedScore);
-			
-		}
-		else {
-			
-			stop();
-			
-		}
-		
-	}
-	
-	protected void nextScene() {
-		
-		sceneController.changeScene(++currentScene);
-		
-	}
-	
-	protected void previousScene() {
-		
-		sceneController.changeScene(--currentScene);
-		
-	}
-	
-	protected void setHSList() {
-		
-		hsSceneController.setScoreText();
-		
-	}
-	
-	private void createTimer() {
+	/**
+	 * This method is is used to create Animation Timer.
+	 * In the timer's handle method, it is to update the score and check if the level is completed.
+	 * If the level is completed, the next level will be displayed
+	 */
+	private void Create_timer() {
 		
 		timer = new AnimationTimer() {
             @Override
@@ -84,15 +61,15 @@ public class Game_controller {
             		
             		if(((Level)scene.getRoot()).getAnimal().changeScore()) {
             			
-            			totalScore = savedScore + ((Level)scene.getRoot()).getAnimal().getPoints();
-            			((Level)scene.getRoot()).getScoreboard().setScore(totalScore);
+            			total_Score = saved_Score + ((Level)scene.getRoot()).getAnimal().getPoints();
+            			((Level)scene.getRoot()).getScoreboard().setScore(total_Score);
             			
             		}
             		
             		if(((Level)scene.getRoot()).getAnimal().getStop()) {
             			
-            			savedScore = totalScore;
-            			nextLevel();
+            			saved_Score = total_Score;
+            			Next_level();
             			
             		}
             		
@@ -108,28 +85,90 @@ public class Game_controller {
 		
     }
 	
-	protected void start() {
+	/**
+	 * This method starts the game and Level_1 is displayed, animation timer created and started
+	 */
+	protected void Start_game() {
 	
-		currentScene = 2;
-		sceneController.activate(currentScene);
-    	createTimer();
+		current_Scene = 2;
+		Scene_controller.Activate(current_Scene);
+		Create_timer();
         timer.start();
         
     }
-
-    private void stop() {
+	
+	/**
+	 * This method stops the game and the fina score is saved, animation timer is also stoped
+	 */
+    private void Stop_game() {
     	
-    	endSceneController.setEndScore(savedScore);
+    	Enter_name_page_controller.Set_final_score(saved_Score);
         timer.stop();
         
     }
+	
+	/**
+	 * This method is used to change from one scene to the subsequent scene
+	 */
+	protected void Next_scene() {
+		
+		Scene_controller.Change_scene(++current_Scene);
+		
+	}
+	
+	/**
+	 * This method is used to change from the current scene to the previous scene
+	 */
+	protected void Previous_scene() {
+		
+		Scene_controller.Change_scene(--current_Scene);
+		
+	}
+	
+	/**
+	 * This method is used changes from one level scene to the next level scene
+	 */
+	private void Next_level() {
+		
+		Next_scene();
+		
+		if (scene.getRoot() instanceof Level) {
+			
+			((Level)scene.getRoot()).getScoreboard().setScore(saved_Score);
+			
+		}
+		else {
+			
+			Stop_game();
+			
+		}
+		
+	}
+	
+	/**
+	 * This method sets the highscore list
+	 */
+	protected void Set_highscore_list() {
+		
+		Leaderboard_page_controller.Set_score_text();
+		
+	}
     
-    protected void restart() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
+    /**
+     * This method is used to reset the scores and the scenes and Level_1 is displayed
+     * @throws InstantiationException
+     * @throws IllegalAccessException
+     * @throws IllegalArgumentException
+     * @throws InvocationTargetException
+     * @throws NoSuchMethodException
+     * @throws SecurityException
+     */
+    protected void Reset() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
     	
-    	savedScore = 0;
-    	totalScore = 0;
-    	sceneController.resetScenes();
-    	start();
+    	saved_Score = 0;
+    	total_Score = 0;
+    	Scene_controller.Reset_scene();
+    	Start_game();
     	
     }
     

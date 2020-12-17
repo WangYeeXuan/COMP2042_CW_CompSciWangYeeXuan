@@ -7,11 +7,15 @@ public class Long_truck extends Obstacle {
 	public Long_truck(int x, int y, double speed) {
 		
 		super(x, y, speed);
-		setLongTruckImage(speed);
+		Set_longtruck_image(speed);
 		
 	}
 	
-	private void setLongTruckImage(double speed) {
+	/**
+	 * Set truck image that depends on the speed
+	 * @param speed
+	 */
+	private void Set_longtruck_image(double speed) {
 		
 		if(speed > 0) {
 			

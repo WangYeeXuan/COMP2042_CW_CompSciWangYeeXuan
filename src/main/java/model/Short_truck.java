@@ -11,6 +11,10 @@ public class Short_truck extends Obstacle {
 		
 	}
 	
+	/**
+	 * Set truck image that depends on the speed
+	 * @param speed
+	 */
 	private void setShortTruckImage(double speed) {
 		
 		if(speed > 0) {

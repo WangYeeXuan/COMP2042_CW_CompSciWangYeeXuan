@@ -10,7 +10,6 @@ public class Wet_turtle extends Platform {
 	private double speed;
 	boolean sunk = false;
 	
-	//Constructor
 	public Wet_turtle(int x, int y, int speed) {
 		
 		super(x, y, speed);
@@ -19,7 +18,6 @@ public class Wet_turtle extends Platform {
 		
 	}
 	
-	//TurtleAnimation by set image
 	private void TurtleState(long now) {
 				
 		if (now/900000000  % 4 ==0) {
@@ -41,18 +39,10 @@ public class Wet_turtle extends Platform {
 				
 	}
 	
-	//Action when method called
-	@Override
-	public void act(long now) {
-
-		TurtleState(now);
-		move(speed , 0);
-		KeepWithinWindow(speed);
-		
-	}
-	
-	
-	//Keep turtle within game window borders
+	/**
+	 * This method keeps the turtle within the application window
+	 * @param speed
+	 */
 	protected void KeepWithinWindow(double speed) {
 		
 		if (getX() > 600 && speed>0) {
@@ -69,10 +59,21 @@ public class Wet_turtle extends Platform {
 
 	}
 	
-	//Return if turtle is sunk
+	/**
+	 * This method return if the frog is sunk
+	 * @return
+	 */
 	protected boolean isSunk() {
 		return sunk;
 	}
 	
+	@Override
+	public void act(long now) {
+
+		TurtleState(now);
+		move(speed , 0);
+		KeepWithinWindow(speed);
+		
+	}
 	
 }

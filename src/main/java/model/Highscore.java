@@ -4,6 +4,11 @@ import java.io.*;
 
 import java.util.ArrayList;
 
+/**
+ * This class is responsible for the arranged display of the scores at the leaderboard
+ * @author E.B. Wang
+ *
+ */
 public class Highscore{
 
 	private String root = System.getProperty("user.dir");
@@ -11,6 +16,11 @@ public class Highscore{
 	private int maxScores = 10;
 	private ArrayList<HighScore> scoreList;
 	
+	/**
+	 * This method is to read the text from the Score_file
+	 * @throws NumberFormatException
+	 * @throws IOException
+	 */
 	public Highscore() throws NumberFormatException, IOException {
 		
 		String line;
@@ -35,7 +45,11 @@ public class Highscore{
 		
 	}
 	
-	public String[] getScoreList() {
+	/**
+	 * This method is to get the array scorelist
+	 * @return 
+	 */
+	public String[] Get_score_list() {
 		
 		String[] list = new String[scoreList.size()];
 		
@@ -49,16 +63,22 @@ public class Highscore{
 		
 	}
 	
-	public void newScore(String name, int score) throws IOException {
+	/**
+	 * This method write the new score in the Score_file if the score is more than the lowest score
+	 * @param name
+	 * @param score
+	 * @throws IOException
+	 */
+	public void New_score(String name, int score) throws IOException {
 		
-		if (this.isNewHighScore(score)) {
+		if (this.New_highscore(score)) {
 			
 			name = name.trim();
 			
 			if (!name.isEmpty()) {
 				
-				this.add(name, score);
-				writeScoreFile();
+				this.Add(name, score);
+				Write_score_file();
 				
 			}
 
@@ -66,7 +86,12 @@ public class Highscore{
 		
 	}
 	
-	private boolean isNewHighScore(int score) {
+	/**
+	 * This method is to check if the score is higher than the lowest score on the leaderboard
+	 * @param score
+	 * @return
+	 */
+	private boolean New_highscore(int score) {
 		
 		if(scoreList.size() < 10) {
 			
@@ -88,7 +113,11 @@ public class Highscore{
 		}
 	}
 	
-	private void writeScoreFile() throws IOException {
+	/**
+	 * This methos is to write into the Score_file
+	 * @throws IOException
+	 */
+	private void Write_score_file() throws IOException {
 			
 		FileWriter write = new FileWriter(scoreFile);
 		PrintWriter out = new PrintWriter(write);
@@ -103,7 +132,12 @@ public class Highscore{
 		
 	}
 	
-	private void add(String name, int score) {
+	/**
+	 * This method is to add the scores and arranged it in ascending order
+	 * @param name
+	 * @param score
+	 */
+	private void Add(String name, int score) {
 		scoreList.add(new HighScore(name, score));
 		int min_element; 
 		int temp_score;        

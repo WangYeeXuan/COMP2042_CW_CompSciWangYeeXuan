@@ -3,52 +3,44 @@ package model;
 import javafx.scene.image.Image;
 
 public class Turtle extends Platform {
-	private Image turtleframe1 = new Image("file:src/main/resources/image/TurtleAnimation1.png", 130, 130, true, true);
-	private Image turtleframe2 = new Image("file:src/main/resources/image/TurtleAnimation2.png", 130, 130, true, true);
-	private Image turtleframe3 = new Image("file:src/main/resources/image/TurtleAnimation3.png", 130, 130, true, true);
+	
+	private Image TurtleAnimation1 = new Image("file:src/main/resources/image/TurtleAnimation1.png", 130, 130, true, true);
+	private Image TurtleAnimation2 = new Image("file:src/main/resources/image/TurtleAnimation2.png", 130, 130, true, true);
+	private Image TurtleAnimation3 = new Image("file:src/main/resources/image/TurtleAnimation3.png", 130, 130, true, true);
 	private double speed;
 	
-	//Constructor
 	public Turtle(int x, int y, double speed) {
 		
 		super(x, y, speed);
 		this.speed = speed;
-		setImage(turtleframe2);
+		setImage(TurtleAnimation2);
 		
 	}
 	
-	//TurtleAnimation by set image
 	private void turtleAnimation(long now) {
 			
 		if (now/900000000  % 3 ==0) {
 			
-			setImage(turtleframe2);
+			setImage(TurtleAnimation2);
 				
 		}
 		else if (now/900000000 % 3 == 1) {
 			
-			setImage(turtleframe1);
+			setImage(TurtleAnimation1);
 				
 		}
 		else if (now/900000000 %3 == 2) {
 			
-			setImage(turtleframe3);
+			setImage(TurtleAnimation3);
 				
 		}
 			
 	}
 	
-	//Action when method called
-	@Override
-	public void act(long now) {
-
-		turtleAnimation(now);	
-		move(speed , 0);
-		KeepWithinWindow(speed);
-		
-	}
-	
-	//Keep turtle within game window borders
+	/**
+	 * This method keeps the turtle within the application window
+	 * @param speed
+	 */
 	protected void KeepWithinWindow(double speed) {
 		
 		if (getX() > 600 && speed>0) {
@@ -64,5 +56,16 @@ public class Turtle extends Platform {
 		}
 
 	}
+	
+	@Override
+	public void act(long now) {
+
+		turtleAnimation(now);	
+		move(speed , 0);
+		KeepWithinWindow(speed);
+		
+	}
+	
+
 	
 }

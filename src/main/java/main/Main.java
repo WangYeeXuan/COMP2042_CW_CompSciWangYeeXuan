@@ -1,19 +1,14 @@
 package main;
 
-import controller.Enter_name_page_controller;
-import controller.Game_controller;
-import controller.Highscore_page_controller;
-import controller.Info_page_controller;
-import controller.Scene_controller;
-import controller.Main_menu_controller;
-import model.Highscore;
-import model.level.*;
-
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+
+import controller.*;
+import model.level.*;
+import model.Highscore;
 
 public class Main extends Application {
 	
@@ -24,72 +19,76 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		
-		
-		//Models
+		//High score model
 		Highscore highScores = new Highscore();
-		Level[] levels = new Level[5];
-		levels[0] = new Level_1();
-		levels[1] = new Level_2();
-		levels[2] = new Level_3();
-		levels[3] = new Level_4();
-		levels[4] = new Level_5();
 		
-		//Setup Scene Controllers
-		Main_menu_controller startSceneController = new Main_menu_controller();
-		Info_page_controller infoSceneController = new Info_page_controller();
-		Enter_name_page_controller endSceneController = new Enter_name_page_controller(highScores);
-		Highscore_page_controller hsSceneController= new Highscore_page_controller(highScores);
+		//Level model
+		Level[] Level = new Level[5];
+		Level[0] = new Level_1();
+		Level[1] = new Level_2();
+		Level[2] = new Level_3();
+		Level[3] = new Level_4();
+		Level[4] = new Level_5();
+		
+		//To setup Scene_controller
+		Main_menu_controller Main_menu_controller = new Main_menu_controller();
+		Info_page_controller Info_page_controller = new Info_page_controller();
+		Enter_name_page_controller Enter_name_page_controller = new Enter_name_page_controller(highScores);
+		Leaderboard_page_controller Leaderboard_page_controller= new Leaderboard_page_controller(highScores);
 
-		//Setup Views
-		FXMLLoader startSceneLoader = new FXMLLoader(getClass().getResource("/view/Main_menu.fxml"));
-		startSceneLoader.setController(startSceneController);
-		Pane startScene = startSceneLoader.load();
+		//Load Main_menu.fxml file
+		FXMLLoader Main_menu_Loader = new FXMLLoader(getClass().getResource("/view/Main_menu.fxml"));
+		Main_menu_Loader.setController(Main_menu_controller);
+		AnchorPane Main_menu = Main_menu_Loader.load();
 		
-		FXMLLoader infoSceneLoader = new FXMLLoader(getClass().getResource("/view/Info_page.fxml"));
-		infoSceneLoader.setController(infoSceneController);
-		Pane infoScene = infoSceneLoader.load();
+		//Load Info_page.fxml file
+		FXMLLoader Info_page_Loader = new FXMLLoader(getClass().getResource("/view/Info_page.fxml"));
+		Info_page_Loader.setController(Info_page_controller);
+		AnchorPane Info_page = Info_page_Loader.load();
 		
-		FXMLLoader endSceneLoader = new FXMLLoader(getClass().getResource("/view/Enter_name_page.fxml"));
-		endSceneLoader.setController(endSceneController);
-		Pane endScene = endSceneLoader.load();
+		//Load Enter_name_page.fxml file
+		FXMLLoader Enter_name_page_Loader = new FXMLLoader(getClass().getResource("/view/Enter_name_page.fxml"));
+		Enter_name_page_Loader.setController(Enter_name_page_controller);
+		AnchorPane Enter_name_page = Enter_name_page_Loader.load();
 		
-		FXMLLoader hsSceneLoader = new FXMLLoader(getClass().getResource("/view/Highscore_page.fxml"));
-		hsSceneLoader.setController(hsSceneController);
-		Pane hsScene = hsSceneLoader.load();
+		//Load Leaderboard_page.fxml file
+		FXMLLoader Leaderboard_page_Loader = new FXMLLoader(getClass().getResource("/view/Leaderboard_page.fxml"));
+		Leaderboard_page_Loader.setController(Leaderboard_page_controller);
+		AnchorPane Leaderboard_page = Leaderboard_page_Loader.load();
 		
-		//Setup SceneController
-		Scene scene  = new Scene(startScene, 600, 800);
+		//To setup Scene_controller
+		Scene scene  = new Scene(Main_menu, 600, 800);
 		
-		Scene_controller sceneController = new Scene_controller(scene, 8);
+		Scene_controller Scene_controller = new Scene_controller(scene, 8);
 		
-		sceneController.addScene(0, startScene);
-		sceneController.addScene(1, infoScene);
-		sceneController.addScene(2, levels[0]);
-		sceneController.addScene(3, levels[1]);
-		sceneController.addScene(4, levels[2]);
-		sceneController.addScene(5, levels[3]);
-		sceneController.addScene(6, levels[4]);
-		sceneController.addScene(7, endScene);
-		sceneController.addScene(8, hsScene);
-		sceneController.activate(0);
+		Scene_controller.Add_scene(0, Main_menu);
+		Scene_controller.Add_scene(1, Info_page);
+		Scene_controller.Add_scene(2, Level[0]);
+		Scene_controller.Add_scene(3, Level[1]);
+		Scene_controller.Add_scene(4, Level[2]);
+		Scene_controller.Add_scene(5, Level[3]);
+		Scene_controller.Add_scene(6, Level[4]);
+		Scene_controller.Add_scene(7, Enter_name_page);
+		Scene_controller.Add_scene(8, Leaderboard_page);
 		
-		//Setup GameController
-		Game_controller gameController = new Game_controller(scene, sceneController, endSceneController, hsSceneController);
+		Scene_controller.Activate(0); //Main_menu is shown first
 		
-		//Link SceneControllers to GameController
-		startSceneController.setGameController(gameController);
-		infoSceneController.setGameController(gameController);
-		endSceneController.setGameController(gameController);
-		hsSceneController.setGameController(gameController);
+		//To setup GameController
+		Game_controller Game_controller = new Game_controller(scene, Scene_controller, Enter_name_page_controller, Leaderboard_page_controller);
 		
+		//Linking Scene_controllers to Game_controller
+		Main_menu_controller.setGameController(Game_controller);
+		Info_page_controller.setGameController(Game_controller);
+		Enter_name_page_controller.setGameController(Game_controller);
+		Leaderboard_page_controller.setGameController(Game_controller);
+		
+		//Show the scene
+	    primaryStage.setResizable(false); //Disable user to adjust the size of the window application
 		primaryStage.setScene(scene);
-	    primaryStage.setResizable(false);
-	    primaryStage.show();
+	    primaryStage.show();	
 	    
-	    gameController.playMusic();
-		
-		
+	    //Play music
+	    Game_controller.Play_music();
+	    
 	}
-	
-	
 }

@@ -7,11 +7,15 @@ public class Fast_car extends Obstacle {
 	public Fast_car(int x, int y, double speed) {
 		
 		super(x, y, speed);
-		setCarImage(speed);
+		Set_fastcar_image(speed);
 		
 	}
 	
-	private void setCarImage(double speed) {
+	/**
+	 * Set car image that depends on the speed
+	 * @param speed
+	 */
+	private void Set_fastcar_image(double speed) {
 		
 		if(speed > 0) {
 			

@@ -4,29 +4,18 @@ import javafx.scene.image.Image;
 
 public class Short_log extends Platform {
 	
-	//Constructor
-	public Short_log(int x, int y, double speed) {
+		public Short_log(int x, int y, double speed) {
 		
 		super(x, y, speed);
-		setImage(new Image("file:src/main/resources/image/log3.png", 150, 150, true, true));
+		Set_shortlog_image();
 		
-	}
-	
-	@Override
-	protected void KeepWithinWindow(double speed) {
+		}
 		
-		if (getX()>600 && speed>0) {
+		public void Set_shortlog_image() {
 			
-			setX(-180);
-			
+			setImage(new Image("file:src/main/resources/image/log3.png", 150, 150, true, true));
+
 		}
 	
-		if (getX()<-300 && speed<0) {
-			
-			setX(700);
-			
-		}
-				
-	}
 	
 }

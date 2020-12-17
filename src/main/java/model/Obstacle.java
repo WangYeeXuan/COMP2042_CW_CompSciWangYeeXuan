@@ -4,7 +4,6 @@ public abstract class Obstacle extends Actor {
 	
 	protected double speed;
 	
-	//Constructor
 	public Obstacle(int x, int y, double speed) {
 
 		setX(x);
@@ -12,15 +11,11 @@ public abstract class Obstacle extends Actor {
 		this.speed = speed;
 		
 	}
-
-	//Action when method called
-	@Override
-	public void act(long now) {
-		move(speed , 0);
-		KeepWithinWindow(speed);
-	}
 	
-	//Keep obstacle within game window borders
+	/**
+	 * This method keeps the obstacles within the application window
+	 * @param speed
+	 */
 	private void KeepWithinWindow(double speed) {
 		
 		if (getX() > 600 && speed>0)
@@ -29,5 +24,12 @@ public abstract class Obstacle extends Actor {
 			setX(600);
 		
 	}
+	
+	@Override
+	public void act(long now) {
+		move(speed , 0);
+		KeepWithinWindow(speed);
+	}
+	
 	
 }
