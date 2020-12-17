@@ -184,7 +184,7 @@ public class Animal extends Actor {
 	
 	private void KeepWithinWindow() {
 		
-		if (getY()<0 || getY()>800) {
+		if (getY()<0 || getY()>750) {
 			setX(300);
 			setY(750);
 		}
@@ -290,7 +290,7 @@ public class Animal extends Actor {
 	private void respawn(boolean goalReached) {
 		
 		setX(300);
-		setY(679.8+movement);
+		setY(750);
 		
 		if (goalReached) {
 			

@@ -9,31 +9,45 @@ public class Level1 extends Level{
 	
 	public Level1() {
 		
-		 
-		add(new Crocodile(0, 166, 0.75));
-		add(new Crocodile(400, 166, 0.75));
-		//add(new ShortLog(0, 166, 0.75));
-		//add(new ShortLog(220, 166, 0.75));
-		//add(new ShortLog(440, 166, 0.75));
-		add(new LongLog(0, 276, -2));
-		add(new LongLog(400, 276, -2));
-		add(new ShortLog(50, 329, 0.75));
-		add(new ShortLog(270, 329, 0.75));
-		add(new ShortLog(490, 329, 0.75));
-		add(new Turtle(500, 376, -1));
-		add(new Turtle(300, 376, -1));
-		add(new WetTurtle(700, 376, -1));
-		add(new WetTurtle(600, 217, -1));
-		add(new WetTurtle(400, 217, -1));
-		add(new WetTurtle(200, 217, -1));
+		//End 
 		add(new End(13,96));
 		add(new End(141,96));
 		add(new End(141 + 141-13,96));
 		add(new End(141 + 141-13+141-13+1,96));
 		add(new End(141 + 141-13+141-13+141-13+3,96));
-		add(new Fastcar(500, 490, -5));
-		add(new Fastcar(500, 600, 2));
+		
+		//Row 1
+		add(new Crocodile(0, 166, 0.75));
+		add(new Crocodile(400, 166, 0.75));
+		
+		//Row 2
+		add(new WetTurtle(600, 217, -1));
+		add(new WetTurtle(400, 217, -1));
+		add(new WetTurtle(200, 217, -1));
+		
+		//Row 3
+		add(new LongLog(0, 276, -2));
+		add(new LongLog(400, 276, -2));
+		
+		//Row 4
+		add(new ShortLog(50, 329, 0.75));
+		add(new MediumLog(270, 329, 0.75));
+		add(new ShortLog(600, 329, 0.75));
+		
+		//Row 5
+		add(new Turtle(500, 376, -1));
+		add(new Turtle(300, 376, -1));
+		add(new Turtle(700, 376, -1));
+		
+		//Row 6
+		add(new Fastcar(500, 485, 5));
+		
 		setAnimaltoFront();
+		
+		
+		//add(new ShortLog(0, 166, 0.75));
+				//add(new ShortLog(220, 166, 0.75));
+				//add(new ShortLog(440, 166, 0.75));
 		/*
 		add(new ShortLog(0, 166, 0.75));
 		add(new ShortLog(220, 166, 0.75));
