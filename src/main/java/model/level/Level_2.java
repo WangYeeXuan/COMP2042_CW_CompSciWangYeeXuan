@@ -12,7 +12,7 @@ public class Level_2 extends Level {
 		add(new End(141 + 141-13,96));
 		add(new End(141 + 141-13+141-13+1,96));
 		add(new End(141 + 141-13+141-13+141-13+3,96));
-		/*		
+				
 		//Row 1
 		add(new Crocodile(0, 166, 0.75));
 		add(new Crocodile(400, 166, 0.75));
@@ -43,7 +43,7 @@ public class Level_2 extends Level {
 		add(new Short_truck(0, 597, 1));
 		
 		setAnimaltoFront();
-		*/
+		
 	}
 	
 }
