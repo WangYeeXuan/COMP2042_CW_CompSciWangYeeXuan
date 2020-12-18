@@ -12,7 +12,7 @@
   </class>  
   <class id="2" language="java" name="model.Turtle" project="Frogger" file="/Frogger/src/main/java/model/Turtle.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="752" y="812"/>    
+    <position height="-1" width="-1" x="654" y="712"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -21,7 +21,7 @@
   </class>  
   <class id="3" language="java" name="model.Long_log" project="Frogger" 
     file="/Frogger/src/main/java/model/Long_log.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="897" y="868"/>    
+    <position height="-1" width="-1" x="737" y="769"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -39,7 +39,7 @@
   </class>  
   <class id="5" language="java" name="model.Actor" project="Frogger" file="/Frogger/src/main/java/model/Actor.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1064" y="571"/>    
+    <position height="-1" width="-1" x="934" y="584"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -57,7 +57,7 @@
   </class>  
   <class id="7" language="java" name="model.End" project="Frogger" file="/Frogger/src/main/java/model/End.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1188" y="433"/>    
+    <position height="-1" width="-1" x="1103" y="479"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -66,7 +66,7 @@
   </class>  
   <class id="8" language="java" name="model.Car" project="Frogger" file="/Frogger/src/main/java/model/Car.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1419" y="652"/>    
+    <position height="-1" width="-1" x="1339" y="749"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -84,7 +84,7 @@
   </class>  
   <class id="10" language="java" name="controller.Game_controller" project="Frogger" 
     file="/Frogger/src/main/java/controller/Game_controller.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1825" y="348"/>    
+    <position height="-1" width="-1" x="1067" y="255"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -102,7 +102,7 @@
   </class>  
   <class id="12" language="java" name="model.Long_truck" project="Frogger" 
     file="/Frogger/src/main/java/model/Long_truck.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1585" y="675"/>    
+    <position height="-1" width="-1" x="1505" y="735"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -111,7 +111,7 @@
   </class>  
   <class id="13" language="java" name="model.Music_player" project="Frogger" 
     file="/Frogger/src/main/java/model/Music_player.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1736" y="480"/>    
+    <position height="-1" width="-1" x="881" y="336"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -120,7 +120,7 @@
   </class>  
   <class id="14" language="java" name="controller.Info_page_controller" project="Frogger" 
     file="/Frogger/src/main/java/controller/Info_page_controller.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1419" y="213"/>    
+    <position height="-1" width="-1" x="777" y="140"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -129,7 +129,7 @@
   </class>  
   <class id="15" language="java" name="model.Highscore" project="Frogger" 
     file="/Frogger/src/main/java/model/Highscore.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2086" y="351"/>    
+    <position height="-1" width="-1" x="1323" y="318"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -138,7 +138,7 @@
   </class>  
   <class id="16" language="java" name="controller.Main_menu_controller" project="Frogger" 
     file="/Frogger/src/main/java/controller/Main_menu_controller.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1645" y="187"/>    
+    <position height="-1" width="-1" x="1010" y="103"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -147,7 +147,7 @@
   </class>  
   <class id="17" language="java" name="controller.Enter_name_page_controller" project="Frogger" 
     file="/Frogger/src/main/java/controller/Enter_name_page_controller.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1880" y="163"/>    
+    <position height="-1" width="-1" x="1264" y="119"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -156,7 +156,7 @@
   </class>  
   <class id="18" language="java" name="model.Highscore.HighScore" project="Frogger" 
     file="/Frogger/src/main/java/model/Highscore.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2093" y="503"/>    
+    <position height="-1" width="-1" x="1271" y="390"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -165,7 +165,7 @@
   </class>  
   <class id="19" language="java" name="model.Short_truck" project="Frogger" 
     file="/Frogger/src/main/java/model/Short_truck.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1752" y="672"/>    
+    <position height="-1" width="-1" x="1638" y="689"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -183,7 +183,7 @@
   </class>  
   <class id="21" language="java" name="model.Wet_turtle" project="Frogger" 
     file="/Frogger/src/main/java/model/Wet_turtle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1056" y="867"/>    
+    <position height="-1" width="-1" x="862" y="782"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -228,7 +228,7 @@
   </class>  
   <class id="26" language="java" name="model.Short_log" project="Frogger" 
     file="/Frogger/src/main/java/model/Short_log.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1209" y="859"/>    
+    <position height="-1" width="-1" x="982" y="789"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -237,7 +237,7 @@
   </class>  
   <class id="27" language="java" name="controller.Scene_controller" project="Frogger" 
     file="/Frogger/src/main/java/controller/Scene_controller.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1927" y="497"/>    
+    <position height="-1" width="-1" x="1081" y="381"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -246,7 +246,7 @@
   </class>  
   <class id="28" language="java" name="model.Platform" project="Frogger" 
     file="/Frogger/src/main/java/model/Platform.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1064" y="707"/>    
+    <position height="-1" width="-1" x="934" y="656"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -255,7 +255,7 @@
   </class>  
   <class id="29" language="java" name="model.Crocodile" project="Frogger" 
     file="/Frogger/src/main/java/model/Crocodile.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1372" y="834"/>    
+    <position height="-1" width="-1" x="1101" y="768"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -264,7 +264,7 @@
   </class>  
   <class id="30" language="java" name="controller.Leaderboard_page_controller" project="Frogger" 
     file="/Frogger/src/main/java/controller/Leaderboard_page_controller.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="2150" y="224"/>    
+    <position height="-1" width="-1" x="1448" y="202"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -273,7 +273,7 @@
   </class>  
   <class id="31" language="java" name="model.Obstacle" project="Frogger" 
     file="/Frogger/src/main/java/model/Obstacle.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1479" y="550"/>    
+    <position height="-1" width="-1" x="1350" y="627"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -282,7 +282,7 @@
   </class>  
   <class id="32" language="java" name="model.Fast_car" project="Frogger" 
     file="/Frogger/src/main/java/model/Fast_car.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1769" y="596"/>    
+    <position height="-1" width="-1" x="1542" y="623"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -291,7 +291,7 @@
   </class>  
   <class id="33" language="java" name="model.Medium_log" project="Frogger" 
     file="/Frogger/src/main/java/model/Medium_log.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1502" y="806"/>    
+    <position height="-1" width="-1" x="1117" y="696"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
@@ -309,7 +309,7 @@
   </class>  
   <class id="35" language="java" name="model.Background_Image" project="Frogger" 
     file="/Frogger/src/main/java/model/Background_Image.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="1365" y="444"/>    
+    <position height="-1" width="-1" x="1239" y="535"/>    
     <display autosize="true" stereotype="true" package="false" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="false" package="false" protected="false" private="false" static="false"/>      
