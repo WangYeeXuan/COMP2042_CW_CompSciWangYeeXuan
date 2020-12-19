@@ -8,6 +8,37 @@
   <junit.jupiter.version>5.5.2</junit.jupiter.version>
   </properties>
   
+  <build>
+    <testSourceDirectory>src/test</testSourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.8.0</version>
+        <configuration>
+          <release>13</release>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+     	<groupId>org.openjfx</groupId>
+        <artifactId>javafx-maven-plugin</artifactId>
+        <version>0.0.1</version>
+        <configuration>
+        <mainClass>main.Main</mainClass>
+        </configuration>
+      </plugin>
+     
+     <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+         <configuration>
+            <mainClass>main.Main</mainClass>
+         </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  
   <dependencies>
   
   	<dependency>
@@ -23,51 +54,50 @@
 		<version>${junit.jupiter.version}</version>
 		<scope>test</scope>
 	</dependency>
-  
-	<dependency>
-		<groupId>org.openjfx</groupId>
-    	<artifactId>javafx-controls</artifactId>
-    	<version>16-ea+5</version>
-  	</dependency>
   	
   	<dependency>
-      	<groupId>org.openjfx</groupId>
-      	<artifactId>javafx-media</artifactId>
-     	 <version>11</version>
-      	<classifier>win</classifier>
-    </dependency>
-    
-    <dependency>
-      	<groupId>org.openjfx</groupId>
-      	<artifactId>javafx-graphics</artifactId>
-     	<version>11</version>
-      	<classifier>win</classifier>
-    </dependency>
-    
-    <dependency>
-     	 <groupId>org.openjfx</groupId>
-      	<artifactId>javafx-fxml</artifactId>
-     	 <version>11</version>
-    </dependency> 
-    
+    	<groupId>org.openjfx</groupId>
+    	<artifactId>javafx-base</artifactId>
+    	<version>15.0.1</version>
+	</dependency>
+	
+	<dependency>
+    	<groupId>org.openjfx</groupId>
+   		 <artifactId>javafx-controls</artifactId>
+   		 <version>15.0.1</version>
+	</dependency>
+
+  	<dependency>
+    	<groupId>org.openjfx</groupId>
+    	<artifactId>javafx-fxml</artifactId>
+   		<version>15.0.1</version>
+	</dependency>
+  	
+  	<dependency>
+    	<groupId>org.openjfx</groupId>
+    	<artifactId>javafx-graphics</artifactId>
+   	 	<version>15.0.1</version>
+	</dependency>
+	
+  	<dependency>
+    	<groupId>org.openjfx</groupId>
+    	<artifactId>javafx-media</artifactId>
+    	<version>15.0.1</version>
+	</dependency>
+   
     <dependency>
     	<groupId>org.openjfx</groupId>
     	<artifactId>javafx-swing</artifactId>
-    	<version>11-ea+24</version>
+    	<version>15.0.1</version>
 	</dependency>
-    
+	
+	<dependency>
+    	<groupId>org.openjfx</groupId>
+    	<artifactId>javafx-web</artifactId>
+    	<version>15.0.1</version>
+	</dependency>
+	
   </dependencies>
   
-  <build>
-    <testSourceDirectory>src/test</testSourceDirectory>
-    <plugins>
-      <plugin>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.8.0</version>
-        <configuration>
-          <release>13</release>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
+  
 </project>

@@ -88,7 +88,7 @@ public class Main extends Application {
 	    primaryStage.show();	
 	    
 	    //Play music
-	    Game_controller.Play_music();
+	    //Game_controller.Play_music();
 	    
 	}
 }

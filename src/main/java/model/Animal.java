@@ -204,7 +204,7 @@ public class Animal extends Actor {
 			
 			if (getIntersectingObjects(Wet_turtle.class).get(0).isSunk()) {
 				
-				waterDeath = true;
+				//waterDeath = true;
 				
 			} 
 			else {
@@ -230,7 +230,7 @@ public class Animal extends Actor {
 		}
 		else if (getY()<413){
 			
-			waterDeath = true;
+			//waterDeath = true;
 			
 		}
 		
