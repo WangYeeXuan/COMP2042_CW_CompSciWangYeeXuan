@@ -2,6 +2,11 @@ package model;
 
 import javafx.scene.image.Image;
 
+/**
+ * This class is responsible for the animation of the model Turtle.
+ * @author Wang
+ *
+ */
 public class Turtle extends Platform {
 	
 	private Image TurtleAnimation1 = new Image("file:src/main/resources/image/TurtleAnimation1.png", 130, 130, true, true);
@@ -9,6 +14,12 @@ public class Turtle extends Platform {
 	private Image TurtleAnimation3 = new Image("file:src/main/resources/image/TurtleAnimation3.png", 130, 130, true, true);
 	private double speed;
 	
+	/**
+	 * This method is to set the parameters.
+	 * @param x indicate x-axis position in the window
+	 * @param y indicate y-axis position in the window
+	 * @param speed indicate the speed of the Turtle
+	 */
 	public Turtle(int x, int y, double speed) {
 		
 		super(x, y, speed);
@@ -17,6 +28,10 @@ public class Turtle extends Platform {
 		
 	}
 	
+	/**
+	 * This method is used to set the turtle animation.
+	 * @param now now
+	 */
 	private void turtleAnimation(long now) {
 			
 		if (now/900000000  % 3 ==0) {
@@ -38,8 +53,8 @@ public class Turtle extends Platform {
 	}
 	
 	/**
-	 * This method keeps the turtle within the application window
-	 * @param speed
+	 * This method keeps the turtle within the application window.
+	 * @param speed indicate the speed of the frog
 	 */
 	protected void KeepWithinWindow(double speed) {
 		

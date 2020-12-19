@@ -1,17 +1,14 @@
 package controller;
 
 import java.io.IOException;
-
 import java.lang.reflect.InvocationTargetException;
-
 import javafx.animation.AnimationTimer;
 import javafx.scene.Scene;
-
 import model.Music_player;
 import model.level.*;
 
 /**
- * This class is responsible to control the view of the game
+ * This class is responsible to control the game scenes.
  * @author Wang
  *
  */
@@ -38,7 +35,7 @@ public class Game_controller {
 	}
 	
 	/**
-	 * This method plays the game music
+	 * This method plays the game music.
 	 */
 	public void Play_music() {
     	
@@ -49,7 +46,7 @@ public class Game_controller {
 	/**
 	 * This method is is used to create Animation Timer.
 	 * In the timer's handle method, it is to update the score and check if the level is completed.
-	 * If the level is completed, the next level will be displayed
+	 * If the level is completed, the next level will be displayed.
 	 */
 	private void Create_timer() {
 		
@@ -86,7 +83,7 @@ public class Game_controller {
     }
 	
 	/**
-	 * This method starts the game and Level_1 is displayed, animation timer created and started
+	 * This method starts the game and Level_1 is displayed, animation timer created and started.
 	 */
 	protected void Start_game() {
 	
@@ -98,7 +95,7 @@ public class Game_controller {
     }
 	
 	/**
-	 * This method stops the game and the fina score is saved, animation timer is also stoped
+	 * This method stops the game and the final score is saved, animation timer is also stoped.
 	 */
     private void Stop_game() {
     	
@@ -108,7 +105,7 @@ public class Game_controller {
     }
 	
 	/**
-	 * This method is used to change from one scene to the subsequent scene
+	 * This method is used to change from one scene to the subsequent scene.
 	 */
 	protected void Next_scene() {
 		
@@ -117,7 +114,7 @@ public class Game_controller {
 	}
 	
 	/**
-	 * This method is used to change from the current scene to the previous scene
+	 * This method is used to change from the current scene to the previous scene.
 	 */
 	protected void Previous_scene() {
 		
@@ -126,7 +123,7 @@ public class Game_controller {
 	}
 	
 	/**
-	 * This method is used changes from one level scene to the next level scene
+	 * This method is used changes from one level scene to the next level scene.
 	 */
 	private void Next_level() {
 		
@@ -146,7 +143,7 @@ public class Game_controller {
 	}
 	
 	/**
-	 * This method sets the highscore list
+	 * This method sets the highscore list.
 	 */
 	protected void Set_highscore_list() {
 		
@@ -155,7 +152,7 @@ public class Game_controller {
 	}
     
     /**
-     * This method is used to reset the scores and the scenes and Level_1 is displayed
+     * This method is used to reset the scores and the scenes and Level_1 is displayed.
      * @throws InstantiationException
      * @throws IllegalAccessException
      * @throws IllegalArgumentException

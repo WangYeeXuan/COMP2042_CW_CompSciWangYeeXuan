@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 /**
- * This class is responsible for the Main_menu GUI
+ * This class is responsible for the Main_menu GUI.
  * @author Wang
  */
 public class Main_menu_controller {
@@ -20,7 +20,7 @@ public class Main_menu_controller {
 	}
 	
 	/**
-	 * This method change Main_menu scene to Level_1 scene. This occur when "START" button is clicked
+	 * This method change Main_menu scene to Level_1 scene. This occur when "START" button is clicked.
 	 */
 	@FXML
 	private void Start_game() {
@@ -30,7 +30,7 @@ public class Main_menu_controller {
 	}
 	
 	/**
-	 * This method change Main_menu scene to Info_page scene when "INFO" button is clicked
+	 * This method change Main_menu scene to Info_page scene when "INFO" button is clicked.
 	 */
 	@FXML
 	private void Open_info() {
@@ -39,11 +39,12 @@ public class Main_menu_controller {
 		
 	}
 	
+	//connect to close button in fxml
 	@FXML
 	public Button closeButton;
 	
 	/**
-	 * This method closes the application window when "EXIT" button is clicked by the user
+	 * This method closes the application window when "EXIT" button is clicked by the user.
 	 * @param event
 	 */
 	@FXML

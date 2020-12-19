@@ -3,7 +3,7 @@ package controller;
 import javafx.fxml.FXML;
 
 /**
- * This class is responsible for the Info_page GUI
+ * This class is responsible for the Info_page GUI.
  * @author Wang
  *
  */
@@ -18,7 +18,7 @@ public class Info_page_controller {
 	}
 	
 	/**
-	 * This method change Info_page scene to Main_menu scene. This occur when the "BACK" button is clicked
+	 * This method change Info_page scene to Main_menu scene. This occur when the "BACK" button is clicked.
 	 */
 	@FXML
 	private void Exit_info() {

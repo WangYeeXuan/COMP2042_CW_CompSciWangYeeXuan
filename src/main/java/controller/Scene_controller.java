@@ -10,7 +10,7 @@ import javafx.scene.layout.Pane;
 import model.level.*;
 
 /**
- * This class controls the scenes
+ * This class is responsible for controlling the scenes.
  * @author Wang
  */
 public class Scene_controller {
@@ -20,9 +20,9 @@ public class Scene_controller {
     private Scene scene;
     
     /**
-     * This method links the Scene_controller to the HashMap
-     * @param scene
-     * @param Scene_num 
+     * This method links the Scene_controller to the HashMap.
+     * @param scene indicate scene
+     * @param Scene_num indicate scene number
      */
     public Scene_controller(Scene scene, int Scene_num) {
     	scene_Map = new HashMap<>(Scene_num);
@@ -30,24 +30,24 @@ public class Scene_controller {
     }
     
     /**
-     * This method is used to add a scene to the HashMap
-     * @param Scene_num 
-     * @param pane
+     * This method is used to add a scene to the HashMap.
+     * @param Scene_num indicate scene number
+     * @param pane indicate pane
      */
     public void Add_scene(Integer Scene_num, Pane pane){
     	scene_Map.put(Scene_num, pane);
     }
     
     /**
-     * This method is used to remove a scene from the HashMap
-     * @param Scene_num
+     * This method is used to remove a scene from the HashMap.
+     * @param Scene_num indicate scene number
      */
     public void Remove_scene(Integer Scene_num){
     	scene_Map.remove(Scene_num);
     }
     
     /**
-     * This method is to start the World timer
+     * This method is to start the World timer.
      */
     protected void Start() {
     	
@@ -56,7 +56,7 @@ public class Scene_controller {
     }
     
     /**
-     * This method is to stop the World timer
+     * This method is to stop the World timer.
      */
     protected void Stop() {
     	
@@ -65,8 +65,8 @@ public class Scene_controller {
     }
     
     /**
-     * This method is to activate/display specific scenes from the HashMap
-     * @param Scene_num
+     * This method is to activate/display specific scenes from the HashMap.
+     * @param Scene_num indicate scene number
      */
     public void Activate(Integer Scene_num){
     	
@@ -79,8 +79,8 @@ public class Scene_controller {
     }
 	
     /**
-     * This method is to change from one scene to another scene
-     * @param Scene_num
+     * This method is to change from one scene to another scene.
+     * @param Scene_num indicate scene number
      */
     protected void Change_scene(Integer Scene_num) {
     	
@@ -95,7 +95,7 @@ public class Scene_controller {
     }
     
     /**
-     * This method resets the scenes in the HashMap
+     * This method resets the scenes in the HashMap.
      * @throws InstantiationException
      * @throws IllegalAccessException
      * @throws IllegalArgumentException

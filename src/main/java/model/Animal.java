@@ -4,7 +4,6 @@ import javafx.event.EventHandler;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 
-
 public class Animal extends Actor {
 	private Image imgW1;
 	private Image imgA1;
@@ -76,11 +75,11 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	 * This method take in user's WASD input.
+	 * This method take in user's WASD input and also UP DOWN LEFT RIGHT.
 	 * The frog is moved accordingly.
 	 * The frog animation is displaye accordingly.
-	 * The score is updated accordingly
-	 * @param event
+	 * The score is updated accordingly.
+	 * @param event indicate event
 	 */
 	private void User_controls(KeyEvent event) {
 		
@@ -88,7 +87,8 @@ public class Animal extends Actor {
 		}
 		else {
 			switch (event.getCode()) {
-			
+				
+				case UP:
 				case W: move(0, -movement);
 						Frog_animation(second, 'W');
 	                	if (second) {
@@ -102,15 +102,18 @@ public class Animal extends Actor {
 	                		}
 	                	}
 	                	break;
-	                
+	            
+				case LEFT:    	
 				case A:	move(-movementX, 0);
 						Frog_animation(second, 'A');
 						break;
-	            	
+	            
+				case DOWN:		
 				case S:	move(0, movement);
 						Frog_animation(second, 'S');
 						break;
-	            	
+	            
+				case RIGHT:		
 				case D:	move(movementX, 0);
 						Frog_animation(second, 'D');
 						break;
@@ -123,16 +126,16 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	 * This method takes in user's WASD input and assign each input with different frog animation
-	 * @param second
-	 * @param key
+	 * This method takes in user's WASD input and assign each input with different frog animation.
+	 * @param second indicate second
+	 * @param key indicate which key is pressed
 	 */
 	private void Frog_animation(boolean second, char key){
 		
 		if (second) {
 			
 			switch(key) {
-			
+				
 				case 'W':	setImage(imgW1);
 							break;
 				case 'A':	setImage(imgA1);
@@ -176,7 +179,7 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	 * This method keeps the frog within the size of the application window
+	 * This method keeps the frog within the size of the application window.
 	 */
 	private void Keep_frog_inbound() {
 		
@@ -193,7 +196,7 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	 * This method checks if the frog has intersect with obstacle, wet turtle, platform and end
+	 * This method checks if the frog has intersect with obstacle, wet turtle, platform and end.
 	 */
 	private void Object_intersection() {
 		
@@ -204,7 +207,7 @@ public class Animal extends Actor {
 			
 			if (getIntersectingObjects(Wet_turtle.class).get(0).isSunk()) {
 				
-				//waterDeath = true;
+				waterDeath = true;
 				
 			} 
 			else {
@@ -230,15 +233,15 @@ public class Animal extends Actor {
 		}
 		else if (getY()<413){
 			
-			//waterDeath = true;
+			waterDeath = true;
 			
 		}
 		
 	}
 	
 	/**
-	 * This method assign death images according to the type of death
-	 * @param now
+	 * This method assign death images according to the type of death.
+	 * @param now now
 	 */
 	private void Death_image(long now) {
 		
@@ -290,7 +293,7 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	 * This method resets to frog position to the starting point
+	 * This method resets to frog position to the starting point.
 	 */
 	private void Reset_frog_position() {
 		setX(300);
@@ -298,8 +301,9 @@ public class Animal extends Actor {
 	}
 	
 	/**
-	 * This method check if the frog has reached the End
-	 * @param goalReached
+	 * This method check if the frog has reached the End.
+	 * Scores are updated accordingly.
+	 * @param goalReached indicate that the frog has reach the End
 	 */
 	private void Respawn(boolean End_reached) {
 		

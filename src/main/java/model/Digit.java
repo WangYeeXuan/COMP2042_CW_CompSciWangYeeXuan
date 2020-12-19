@@ -2,13 +2,14 @@ package model;
 
 import javafx.scene.image.Image;
 
+
 public class Digit extends Actor{
 	
 	//Create an array to for the numbers
 	private Image[] number = new Image[10];
 	
 	/**
-	 * This method assign each value in the array with a number image
+	 * This method assign each value in the array with a number image.
 	 * @param n indicate the value in the array
 	 * @param dimensions indicate the dimensions of the image
 	 * @param x indicate the x coordinate
@@ -33,6 +34,10 @@ public class Digit extends Actor{
 		
 	}
 	
+	/**
+	 * This method is to set the digit image.
+	 * @param n indicate the value in the array
+	 */
 	public void setDigit(int n) {
 		
 		setImage(number[n]);

@@ -2,6 +2,11 @@ package model.level;
 
 import model.*;
 
+/**
+ * This class is responsible for which model is added to the Level_2.
+ * @author Wang
+ *
+ */
 public class Level_2 extends Level {
 	
 	public Level_2() {
@@ -37,7 +42,7 @@ public class Level_2 extends Level {
 		add(new Turtle(700, 376, -1));
 				
 		//Row 6
-		add(new Fast_car(500, 485, -5));
+		add(new Fast_car(500, 485, -3));
 		
 		//Row 8
 		add(new Short_truck(0, 597, 1));

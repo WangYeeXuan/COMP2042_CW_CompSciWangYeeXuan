@@ -5,12 +5,17 @@ import java.io.File;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+/**
+ * This class is responsible for the music of the application.
+ * @author Wang
+ *
+ */
 public class Music_player{
 
 	private MediaPlayer mediaPlayer;
 	
 	/**
-	 * Load music player
+	 * Load music player.
 	 */
 	public Music_player(){
 		
@@ -22,7 +27,7 @@ public class Music_player{
 	}
 	
 	/**
-	 * Play music
+	 * Play music.
 	 */
 	public void play() {
 		
@@ -30,7 +35,7 @@ public class Music_player{
 	}
 	
 	/**
-	 * Stop music
+	 * Stop music.
 	 */
 	public void stop() {
 		mediaPlayer.stop();

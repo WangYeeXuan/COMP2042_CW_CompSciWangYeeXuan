@@ -3,7 +3,7 @@ package model;
 import javafx.scene.image.Image;
 
 /**
- * This class is reponsible for setting the background image
+ * This class is reponsible for setting the background image.
  * @author Wang
  *
  */

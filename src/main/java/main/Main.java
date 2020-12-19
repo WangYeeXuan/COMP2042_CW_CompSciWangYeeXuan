@@ -5,13 +5,16 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
-
 import controller.*;
 import model.level.*;
 import model.Highscore;
 
 public class Main extends Application {
 	
+	/**
+	 * This is the main method.
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		launch(args);
 	}
@@ -88,7 +91,7 @@ public class Main extends Application {
 	    primaryStage.show();	
 	    
 	    //Play music
-	    //Game_controller.Play_music();
+	    Game_controller.Play_music();
 	    
 	}
 }

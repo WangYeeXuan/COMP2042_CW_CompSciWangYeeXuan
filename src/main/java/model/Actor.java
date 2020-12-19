@@ -1,12 +1,10 @@
 package model;
 
 import javafx.scene.image.ImageView;
-
-
 import java.util.ArrayList;
 
 /**
- * This class allow other class to implement its act method. ImageView is manipulated by moving it around in the GUI and check for collision
+ * This class allow other class to implement its act method. ImageView is manipulated by moving it around in the GUI and check for collision.
  * @author Wang
  *
  */
@@ -31,7 +29,7 @@ public abstract class Actor extends ImageView{
     }
     
     /**
-     * This method is to check intersection between objects
+     * This method is to check intersection between objects.
      * @param <A> empty arraylist
      * @param cls object to check intersections with
      * @return an array that contain all actors that are intersecting
@@ -47,7 +45,7 @@ public abstract class Actor extends ImageView{
     }
    
     /**
-     * This Abstract method is to get parameter now
+     * This Abstract method is to get parameter now.
      * @param now now
      */
     public abstract void act(long now);

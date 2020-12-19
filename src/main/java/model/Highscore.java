@@ -1,12 +1,11 @@
 package model;
 
 import java.io.*;
-
 import java.util.ArrayList;
 
 /**
- * This class is responsible for the arranged display of the scores at the leaderboard
- * @author E.B. Wang
+ * This class is responsible for the arranged display of the scores at the leaderboard.
+ * @author Wang
  *
  */
 public class Highscore{
@@ -17,7 +16,7 @@ public class Highscore{
 	private ArrayList<HighScore> scoreList;
 	
 	/**
-	 * This method is to read the text from the Score_file
+	 * This method is to read the text from the Score_file.
 	 * @throws NumberFormatException
 	 * @throws IOException
 	 */
@@ -46,8 +45,8 @@ public class Highscore{
 	}
 	
 	/**
-	 * This method is to get the array scorelist
-	 * @return 
+	 * This method is to get the array scorelist.
+	 * @return list
 	 */
 	public String[] Get_score_list() {
 		
@@ -64,9 +63,9 @@ public class Highscore{
 	}
 	
 	/**
-	 * This method write the new score in the Score_file if the score is more than the lowest score
-	 * @param name
-	 * @param score
+	 * This method write the new score in the Score_file if the score is more than the lowest score.
+	 * @param name indicate user's name
+	 * @param score indicate user's score
 	 * @throws IOException
 	 */
 	public void New_score(String name, int score) throws IOException {
@@ -87,9 +86,9 @@ public class Highscore{
 	}
 	
 	/**
-	 * This method is to check if the score is higher than the lowest score on the leaderboard
-	 * @param score
-	 * @return
+	 * This method is to check if the score is higher than the lowest score on the leaderboard.
+	 * @param score indicate the user's score
+	 * @return boolean
 	 */
 	private boolean New_highscore(int score) {
 		
@@ -114,7 +113,7 @@ public class Highscore{
 	}
 	
 	/**
-	 * This methos is to write into the Score_file
+	 * This methos is to write into the Score_file.
 	 * @throws IOException
 	 */
 	private void Write_score_file() throws IOException {
@@ -133,9 +132,9 @@ public class Highscore{
 	}
 	
 	/**
-	 * This method is to add the scores and arranged it in ascending order
-	 * @param name
-	 * @param score
+	 * This method is to add the scores and arranged it in ascending order.
+	 * @param name indicate user's name
+	 * @param score indicate user's score
 	 */
 	private void Add(String name, int score) {
 		scoreList.add(new HighScore(name, score));

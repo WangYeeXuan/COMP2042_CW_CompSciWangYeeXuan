@@ -73,11 +73,11 @@ This is the README file for the coursework for COMP2042. A JavaFX project game c
     - This class controls the display of the game 
   * **Main_menu_controller**
     - This class handles the GUI of Main_menu.fxml
-   * **Info_page_controller**
+  * **Info_page_controller**
     - This class handles the GUI of Info_page.fxml
-   * **Enter_name_page**
+  * **Enter_name_page**
     - This class handles the GUI of Enter_name_page.fxml
-   * **Leaderboard_page_controller**
+  * **Leaderboard_page_controller**
     - This class handles the GUI of Leaderboard_page_controller.fxml
    
 * **New level**
@@ -93,10 +93,33 @@ This is the README file for the coursework for COMP2042. A JavaFX project game c
 
 # How to run
 
-1) Clone or download the project from github 
-   https://github.com/WangYeeXuan/COMP2042_CW_CompSciWangYeeXuan.git   
-2) Open your command prompt 
-3) Change the directory folder to where you download the project
-   cd C:\...(folder location)
-4) In your command prompt, type mvnw.cmd clean install
-5) After the installation, type mvnw.cmd exec:java
+* **Command prompt**
+1) Clone or download the project zip file from github
+   https://github.com/WangYeeXuan/COMP2042_CW_CompSciWangYeeXuan.git 
+2) Extract the zip file in your desired file location   
+3) Make sure you have java development kit in your computer and its environment variables are setup up correctly(JAVA_HOME)   
+4) Open your command prompt 
+5) Change the directory folder to where you store the extracted files
+   cd C:\ ...(file location)
+6) In your command prompt, type:
+   mvnw.cmd clean install
+7) After the installation is completed, type:
+   mvnw.cmd exec:java
+8) The game window will pop up
+
+* **Eclipse**
+1) Clone or download the project zip file from github 
+   https://github.com/WangYeeXuan/COMP2042_CW_CompSciWangYeeXuan.git 
+2) Extract the zip file in your desired file location   
+3) Make sure you have java development kit in your computer and its environment variables are setup up correctly(JAVA_HOME)   
+4) Open eclipse, select file, select import, select general folder, select "Projects from Folder or Archive"
+5) Enter the location of the extracted files and click finish
+6) Right click the project and select "Show In" then select "Terminal"
+7) In the terminal, type:
+   mvnw.cmd clean install
+8) After the installation is completed, type:
+   mvnw.cmd exec:java
+9) The game window will pop up
+
+* **JUnit test**
+1) In eclipse, right clicked on any javaTest file and run as JUnit test

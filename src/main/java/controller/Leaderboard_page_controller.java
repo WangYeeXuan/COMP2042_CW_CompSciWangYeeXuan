@@ -3,18 +3,16 @@ package controller;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.scene.control.Button;
-
 import model.Highscore;
 
 /**
- * This class is responsible for the display of the leaderboard and Leaderboard.fxml GUI
+ * This class is responsible for the display of the leaderboard and Leaderboard.fxml GUI.
  * @author Wang
  *
  */
@@ -23,12 +21,15 @@ public class Leaderboard_page_controller implements Initializable{
 	private Highscore highScores;
 	private Game_controller Game_controller;
 	
+	//connect to the highscore in fxml
 	@FXML 
 	private Text highScore;
-		
+	
+	//connect to the scores text in fxml
 	@FXML
 	private Text score_1, score_2, score_3, score_4, score_5, score_6, score_7, score_8, score_9, score_10;
 	
+	//connect to the name text in fxml
 	@FXML
 	private Text name_1, name_2, name_3, name_4, name_5, name_6, name_7, name_8, name_9, name_10;
 	
@@ -48,7 +49,7 @@ public class Leaderboard_page_controller implements Initializable{
 	}
 	
 	/**
-	 * This methos initialize all the Score_text and Name_text
+	 * This method initialize all the Score_text and Name_text.
 	 */
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
@@ -60,7 +61,7 @@ public class Leaderboard_page_controller implements Initializable{
 	}
 	
 	/**
-	 * This method is to display the name and the score text
+	 * This method is to display the name and the score text.
 	 */
 	protected void Set_score_text() {
 		
@@ -79,7 +80,7 @@ public class Leaderboard_page_controller implements Initializable{
 	}
 	
 	/**
-	 * This method changes from Leaderboard scene to Leve_1 scene
+	 * This method change Leaderboard scene to Level_1 scene when the "RETRY" button is clicked.
 	 * @throws InstantiationException
 	 * @throws IllegalAccessException
 	 * @throws IllegalArgumentException
@@ -91,13 +92,15 @@ public class Leaderboard_page_controller implements Initializable{
 	private void Retry() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		
 		Game_controller.Reset();
-		
+	
 	}
+	
+	//connecct to close button in fxml
 	@FXML
 	public Button closeButton;
 	
 	/**
-	 * This method closes the application window when "EXIT" button is clicked by the user
+	 * This method closes the application window when "EXIT" button is clicked by the user.
 	 * @param event
 	 */
 	@FXML

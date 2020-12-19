@@ -30,27 +30,27 @@
             </LinearGradient>
          </fill>
       </Text>
-      <ImageView fitHeight="143.0" fitWidth="133.0" layoutX="28.0" layoutY="113.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="84.0" fitWidth="103.0" layoutX="43.0" layoutY="95.0" pickOnBounds="true">
          <image>
             <Image url="@../image/wasdImg.png" />
          </image>
       </ImageView>
-      <Text fill="WHITE" layoutX="204.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W - Move forward">
+      <Text fill="WHITE" layoutX="204.0" layoutY="124.0" strokeType="OUTSIDE" strokeWidth="0.0" text="W/ UP - Move forward">
          <font>
             <Font size="26.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="196.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" A - Move Left" wrappingWidth="167.0">
+      <Text fill="WHITE" layoutX="199.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" A/ LEFT - Move Left" wrappingWidth="268.60003662109375">
          <font>
             <Font size="26.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="204.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S  - Move Downward">
+      <Text fill="WHITE" layoutX="204.0" layoutY="208.0" strokeType="OUTSIDE" strokeWidth="0.0" text="S/DOWN  - Move Downward">
          <font>
             <Font size="26.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="204.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D - Move Right">
+      <Text fill="WHITE" layoutX="204.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D/RIGHT - Move Right">
          <font>
             <Font size="26.0" />
          </font>
@@ -106,5 +106,10 @@
             <Font size="23.0" />
          </font>
       </Text>
+      <ImageView fitHeight="84.0" fitWidth="103.0" layoutX="43.0" layoutY="179.0">
+         <image>
+            <Image url="@../image/upDownLeftRightkeys.jpg" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

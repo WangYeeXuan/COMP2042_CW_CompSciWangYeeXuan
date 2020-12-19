@@ -1,16 +1,14 @@
 package controller;
 
 import java.io.IOException;
-
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.scene.control.Label;
-
 import model.Highscore;
 
 /**
- * This class is responsible for the Enter_name_page GUI
+ * This class is responsible for the Enter_name_page GUI.
  * @author Wang
  *
  */
@@ -20,12 +18,15 @@ public class Enter_name_page_controller {
 	private Highscore Highscore;
 	private int score;
 	
+	//connect to final score label in fxml
 	@FXML
 	private Label Final_score;
 	
+	//connect to user score and name text in fxml
 	@FXML 
 	private Text Your_score, Name_text;
 	
+	//connect to username textfield in fxml
 	@FXML 
 	private TextField Username;
 	
@@ -42,7 +43,7 @@ public class Enter_name_page_controller {
 	}
 	
 	/**
-	 * This method register user's keyboard input and display it
+	 * This method register user's keyboard input and display it.
 	 */
 	@FXML
 	private void Key_typed() {
@@ -57,8 +58,8 @@ public class Enter_name_page_controller {
 	}
 	
 	/**
-	 * This method is to set the final score achieved by the user
-	 * @param score
+	 * This method is to set the final score achieved by the user.
+	 * @param score indicate user's score
 	 */
 	protected void Set_final_score(int score) {
 		
@@ -68,7 +69,8 @@ public class Enter_name_page_controller {
 	}
 	
 	/**
-	 * This method change Enter_name_page scene to Leaderbard scene
+	 * This method updates the leaderboard scores.
+	 * Then it change Enter_name_page scene to Leaderboard_page scene.
 	 * @throws IOException
 	 */
 	@FXML
